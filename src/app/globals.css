@@ -1,26 +1,44 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  /* Colors */
+  --color-cream: #faf7f2;
+  --color-cream-dark: #f0ebe0;
+  --color-amber: #d97706;
+  --color-amber-light: #fbbf24;
+  --color-terracotta: #c2612a;
+  --color-slate: #3b4f6b;
+  --color-slate-dark: #1e2d42;
+  --color-graphite: #374151;
+  --color-graphite-light: #6b7280;
+  --color-ink: #1a1a2e;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  /* Fonts */
+  --font-heading: var(--font-lora);
+  --font-body: var(--font-inter);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: #faf7f2;
+  color: #1a1a2e;
+  font-family: var(--font-inter), system-ui, sans-serif;
+}
+
+/* Subtle gridline background texture */
+.bg-grid {
+  background-image:
+    linear-gradient(rgba(59, 79, 107, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(59, 79, 107, 0.06) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* Subtle honeycomb background texture using CSS */
+.bg-honeycomb {
+  background-color: #faf7f2;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='100'%3E%3Cpath d='M28 66L0 50V16L28 0l28 16v34L28 66zm0-2l26-15V18L28 2 2 18v31l26 15z' fill='%233b4f6b' fill-opacity='0.04'/%3E%3Cpath d='M28 100L0 84V50l28-16 28 16v34L28 100zm0-2l26-15V52L28 36 2 52v31l26 15z' fill='%233b4f6b' fill-opacity='0.04'/%3E%3C/svg%3E");
+}
+
+/* Typography */
+h1, h2, h3 {
+  font-family: var(--font-lora), Georgia, serif;
 }

@@ -1,65 +1,144 @@
+import Link from "next/link";
 import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+    <>
+      {/* Hero */}
+      <section className="bg-honeycomb min-h-screen flex items-center pt-20">
+        <div className="max-w-5xl mx-auto px-6 py-24 w-full">
+          <p className="text-[#d97706] font-medium text-sm tracking-widest uppercase mb-4">
+            Product Leader · Technologist · AI Practitioner
           </p>
+          <div className="grid md:grid-cols-[70%_30%] gap-12 items-start">
+            {/* Left — main content (70%) */}
+            <div>
+              <h1 className="font-heading text-5xl md:text-7xl font-bold text-[#1a1a2e] leading-tight mb-6">
+                I help Product people<br />
+                <span className="text-[#3b4f6b]">build what&apos;s next.</span>
+              </h1>
+              <p className="text-[#374151] text-xl md:text-2xl leading-relaxed mb-10">
+                Twenty years navigating the intersection of technology, people, and strategy —
+                from enterprise transformations to AI-powered products.
+              </p>
+              <div className="flex flex-wrap gap-4">
+                <Link
+                  href="/about"
+                  className="bg-[#1a1a2e] text-[#faf7f2] px-6 py-3 rounded text-sm font-medium hover:bg-[#3b4f6b] transition-colors"
+                >
+                  About Me
+                </Link>
+                <Link
+                  href="/contact"
+                  className="border border-[#d97706] text-[#d97706] px-6 py-3 rounded text-sm font-medium hover:bg-[#d97706] hover:text-white transition-colors"
+                >
+                  Get in Touch
+                </Link>
+              </div>
+            </div>
+
+            {/* Right — photo (30%) */}
+            <div className="hidden md:flex justify-center">
+              <Image
+                src="/images/ben-poole.jpg"
+                alt="Ben Poole"
+                width={320}
+                height={320}
+                className="rounded-2xl object-cover shadow-lg w-full aspect-square"
+              />
+            </div>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </section>
+
+      {/* What I Do */}
+      <section className="bg-grid py-24">
+        <div className="max-w-5xl mx-auto px-6">
+          <h2 className="font-heading text-3xl md:text-4xl font-bold text-[#1a1a2e] mb-4">
+            Connecting the dots others miss.
+          </h2>
+          <p className="text-[#6b7280] text-lg max-w-2xl mb-16">
+            My work lives at the edge of what&apos;s technical and what&apos;s human — where data tells a story, systems serve people, and change actually sticks.
+          </p>
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              {
+                title: "Product Leadership",
+                desc: "Turning messy ambiguity into clear roadmaps, aligned teams, and shipped outcomes — at scale.",
+                color: "border-[#d97706]",
+              },
+              {
+                title: "AI & Technology",
+                desc: "Building with AI thoughtfully — not hype-first, but outcome-first. Azure certified, hands-on practitioner.",
+                color: "border-[#3b4f6b]",
+              },
+              {
+                title: "Change & People",
+                desc: "Prosci certified. Change that doesn't account for people isn't change — it's disruption with a timeline.",
+                color: "border-[#c2612a]",
+              },
+            ].map(({ title, desc, color }) => (
+              <div
+                key={title}
+                className={`bg-[#faf7f2] border-t-4 ${color} p-6 rounded shadow-sm`}
+              >
+                <h3 className="font-heading text-xl font-semibold text-[#1a1a2e] mb-3">
+                  {title}
+                </h3>
+                <p className="text-[#6b7280] text-sm leading-relaxed">{desc}</p>
+              </div>
+            ))}
+          </div>
         </div>
-      </main>
-    </div>
+      </section>
+
+      {/* Blog teaser */}
+      <section className="py-24 bg-[#faf7f2]">
+        <div className="max-w-5xl mx-auto px-6 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+          <div>
+            <h2 className="font-heading text-3xl font-bold text-[#1a1a2e] mb-2">
+              Thinking out loud.
+            </h2>
+            <p className="text-[#6b7280] text-lg">
+              Perspectives on AI, product, leadership, and the messy middle of getting things done.
+            </p>
+          </div>
+          <Link
+            href="/blog"
+            className="shrink-0 bg-[#faf7f2] border border-[#3b4f6b]/30 text-[#3b4f6b] px-6 py-3 rounded text-sm font-medium hover:border-[#3b4f6b] transition-colors"
+          >
+            Read the Blog →
+          </Link>
+        </div>
+      </section>
+
+      {/* Certifications teaser */}
+      <section className="py-24 bg-[#1a1a2e]">
+        <div className="max-w-5xl mx-auto px-6">
+          <h2 className="font-heading text-3xl font-bold text-[#faf7f2] mb-2">
+            Credentials that mean something.
+          </h2>
+          <p className="text-[#a0a0b0] text-lg mb-10">
+            Not just logos on a page — each certification represents a capability I put to work.
+          </p>
+          <div className="flex flex-wrap gap-3 mb-10">
+            {["Microsoft Azure", "Prosci Change Management", "More →"].map((cert) => (
+              <span
+                key={cert}
+                className="bg-[#3b4f6b]/40 text-[#faf7f2] text-sm px-4 py-2 rounded-full border border-[#3b4f6b]"
+              >
+                {cert}
+              </span>
+            ))}
+          </div>
+          <Link
+            href="/certifications"
+            className="text-[#d97706] text-sm font-medium hover:underline"
+          >
+            View certifications & featured work →
+          </Link>
+        </div>
+      </section>
+    </>
   );
 }
