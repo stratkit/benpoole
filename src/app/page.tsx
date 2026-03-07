@@ -8,7 +8,7 @@ export default function Home() {
       <section className="bg-honeycomb min-h-screen flex items-center pt-20">
         <div className="max-w-5xl mx-auto px-6 py-24 w-full">
           <p className="text-[#d97706] font-medium text-sm tracking-widest uppercase mb-4">
-            Product Leader · Technologist · AI Practitioner
+            Product Strategy | Agentic AI | Data Products | UX Research | Technology Enablement
           </p>
           <div className="grid md:grid-cols-[70%_30%] gap-12 items-start">
             {/* Left — main content (70%) */}
