@@ -8,13 +8,13 @@ export default function Home() {
       <section className="bg-honeycomb min-h-screen flex items-center pt-20">
         <div className="max-w-5xl mx-auto px-6 py-24 w-full">
           <p className="text-[#d97706] font-medium text-sm tracking-widest uppercase mb-4">
-            Product Strategy | Agentic AI | Data Products | UX Research | Technology Enablement
+            Product Strategy | Agentic AI | Data Products | UX Research
           </p>
           <div className="grid md:grid-cols-[70%_30%] gap-12 items-start">
             {/* Left — main content (70%) */}
             <div>
               <h1 className="font-heading text-5xl md:text-7xl font-bold text-[#1a1a2e] leading-tight mb-6">
-                I help Product people <span className="text-[#3b4f6b]">build what&apos;s next.</span>
+                I help Product people blend data with research <span className="text-[#3b4f6b]">to make their product matter.</span>
               </h1>
               <p className="text-[#374151] text-xl md:text-2xl leading-relaxed mb-10">
                 Twenty years navigating the intersection of technology, people, and strategy —
