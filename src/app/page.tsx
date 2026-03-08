@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import RandomQuote from "@/components/RandomQuote";
 
 export default function Home() {
   return (
@@ -49,6 +50,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <RandomQuote />
 
       {/* What I Do */}
       <section className="bg-grid py-24">

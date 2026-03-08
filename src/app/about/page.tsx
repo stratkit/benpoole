@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import RandomQuote from "@/components/RandomQuote";
 
 export const metadata: Metadata = {
   title: "About | Ben Poole",
@@ -9,6 +10,8 @@ export const metadata: Metadata = {
 export default function About() {
   return (
     <div className="pt-24">
+
+      <RandomQuote />
 
       {/* Hero */}
       <section className="bg-honeycomb py-24">

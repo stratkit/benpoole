@@ -1,0 +1,42 @@
+[
+  {
+    "text": "Opinion builds a product. Research builds a business.",
+    "tags": ["product", "strategy"]
+  },
+  {
+    "text": "All Product teams add features. The rare ones add them with enough certainty to know why.",
+    "tags": ["product", "strategy"]
+  },
+  {
+    "text": "The biggest competitive edge isn't building something good — it's knowing you're building the right thing.",
+    "tags": ["product", "strategy"]
+  },
+  {
+    "text": "Everything is a product to me, including the very process a team uses to understand its users.",
+    "tags": ["product", "data"]
+  },
+  {
+    "text": "Change that doesn't account for people isn't change. It's disruption with a timeline.",
+    "tags": ["change", "people"]
+  },
+  {
+    "text": "Bringing Engineering and Data Science closer to customers isn't a technical problem. It's a cultural one.",
+    "tags": ["data", "people"]
+  },
+  {
+    "text": "AI agents don't replace the need for good questions. They make bad questions more expensive.",
+    "tags": ["ai", "strategy"]
+  },
+  {
+    "text": "A dashboard no one acts on is just a very expensive mirror.",
+    "tags": ["data", "product"]
+  },
+  {
+    "text": "Certainty is a product you build iteratively, the same way you build anything else worth having.",
+    "tags": ["product", "strategy"]
+  },
+  {
+    "text": "The feedback loop is the product. Everything else is just output.",
+    "tags": ["product", "data"]
+  }
+]

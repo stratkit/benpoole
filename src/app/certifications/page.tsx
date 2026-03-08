@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Certifications | Ben Poole",
@@ -10,9 +11,9 @@ const certifications = [
     name: "Microsoft Azure",
     issuer: "Microsoft",
     credential: "Azure Fundamentals (AZ-900)",
-    summary: "Cloud architecture and services, earned to put to work, not to hang on a wall.",
+    summary: "",
     description:
-      "Azure certification gave me a rigorous foundation in cloud infrastructure: compute, networking, storage, identity, and security. More importantly, it gave me a shared vocabulary with engineering teams and the credibility to make architectural decisions that held up under scrutiny.",
+      "Earning the Microsoft Azure Certification gave me a rigorous foundation in cloud infrastructure: compute, networking, storage, identity, and security. More importantly, it gave me a shared vocabulary with engineering teams and the credibility to make architectural decisions that held up under scrutiny. And of course, it prepared me to begin creating with Copilot and Microsoft AI tools.",
     work: {
       title: "Fintech Startup Scaling: $1B+ Valuation",
       detail:
@@ -25,6 +26,7 @@ const certifications = [
     tags: ["Cloud", "Infrastructure", "Fintech", "Enterprise"],
     accentColor: "border-[#3b4f6b]",
     tagColor: "bg-[#3b4f6b]/10 text-[#3b4f6b]",
+    image: "/images/cert-azure-func.png",
   },
   {
     name: "Prosci Change Management",
@@ -45,6 +47,20 @@ const certifications = [
     tags: ["Change Management", "Leadership", "Enterprise", "UX Research"],
     accentColor: "border-[#c2612a]",
     tagColor: "bg-[#c2612a]/10 text-[#c2612a]",
+    image: "/images/cert-prosci.png",
+  },
+  {
+    name: "FINRA Series 6",
+    issuer: "FINRA",
+    credential: "Registered Financial Products Representative (Formerly NASD)",
+    summary: "",
+    description:
+      "My goal for earning the Series 6 Mutual Funds, Variable Annuities and Variable Insurance Products was never to sell investments or take on investors as clients. But in building software for the financial industry, I needed to first build credibility among Advisors, Broker/Dealers, Representatives, and even the Custodians. Earning it required deep fluency in securities regulation and compliance, investor protections and data privacy rights, and the compliance frameworks that govern financial product distribution. It gave me firsthand appreciation for how much regulatory structure shapes product design in fintech — and why engineers and product managers in that space need to understand the rules before they build the tools.",
+    work: null,
+    tags: ["Fintech", "Compliance", "Financial Products", "Regulation"],
+    accentColor: "border-[#06b6d4]",
+    tagColor: "bg-[#06b6d4]/10 text-[#06b6d4]",
+    image: "/images/FINRA-series6.png",
   },
 ];
 
@@ -57,10 +73,10 @@ export default function Certifications() {
         <div className="max-w-5xl mx-auto px-6">
           <p className="text-[#06b6d4] font-medium text-sm tracking-widest uppercase mb-4">Certifications & Work</p>
           <h1 className="font-heading text-4xl md:text-6xl font-bold text-[#f1f5f9] leading-tight mb-4">
-            Credentials in context.
+            Certifications and Credentials
           </h1>
-          <p className="text-[#94a3b8] text-xl max-w-2xl leading-relaxed">
-            Every certification here connects to real work. Here&apos;s what I earned, why it matters, and where I put it to use.
+          <p className="text-[#94a3b8] text-xl leading-relaxed">
+            Every certification here connects to real work. Here&apos;s what I learned, why it matters, and where I put it to use.
           </p>
         </div>
       </section>
@@ -73,9 +89,16 @@ export default function Certifications() {
               {/* Top */}
               <div className="p-8 pb-6">
                 <div className="flex flex-wrap items-start justify-between gap-4 mb-4">
-                  <div>
-                    <h2 className="font-heading text-2xl md:text-3xl font-bold text-[#f1f5f9]">{cert.name}</h2>
-                    <p className="text-[#94a3b8] text-sm mt-1">{cert.issuer} · {cert.credential}</p>
+                  <div className="flex items-start gap-5">
+                    {cert.image && (
+                      <div className="shrink-0 bg-white rounded-xl p-2 shadow-sm">
+                        <Image src={cert.image} alt={`${cert.name} badge`} width={144} height={144} className="object-contain" />
+                      </div>
+                    )}
+                    <div>
+                      <h2 className="font-heading text-2xl md:text-3xl font-bold text-[#f1f5f9]">{cert.name}</h2>
+                      <p className="text-[#94a3b8] text-sm mt-1">{cert.issuer} · {cert.credential}</p>
+                    </div>
                   </div>
                   <div className="flex flex-wrap gap-2">
                     {cert.tags.map((tag) => (
@@ -85,24 +108,26 @@ export default function Certifications() {
                     ))}
                   </div>
                 </div>
-                <p className="text-[#06b6d4] font-medium italic mb-3">&ldquo;{cert.summary}&rdquo;</p>
+                {cert.summary && <p className="text-[#06b6d4] font-medium italic mb-3">&ldquo;{cert.summary}&rdquo;</p>}
                 <p className="text-[#cbd5e1] leading-relaxed">{cert.description}</p>
               </div>
 
               {/* Featured work */}
-              <div className="bg-[#020617] px-8 py-6">
-                <p className="text-xs text-[#06b6d4] font-medium uppercase tracking-wider mb-3">Featured Work</p>
-                <h3 className="font-heading text-lg font-semibold text-[#faf7f2] mb-3">{cert.work.title}</h3>
-                <p className="text-[#a0a0b0] text-sm leading-relaxed mb-6">{cert.work.detail}</p>
-                <div className="flex gap-8">
-                  {cert.work.stats.map(({ value, label }) => (
-                    <div key={label}>
-                      <div className="text-2xl font-bold text-[#06b6d4]">{value}</div>
-                      <div className="text-xs text-[#94a3b8] mt-0.5">{label}</div>
-                    </div>
-                  ))}
+              {cert.work && (
+                <div className="bg-[#020617] px-8 py-6">
+                  <p className="text-xs text-[#06b6d4] font-medium uppercase tracking-wider mb-3">Featured Work</p>
+                  <h3 className="font-heading text-lg font-semibold text-[#faf7f2] mb-3">{cert.work.title}</h3>
+                  <p className="text-[#a0a0b0] text-sm leading-relaxed mb-6">{cert.work.detail}</p>
+                  <div className="flex gap-8">
+                    {cert.work.stats.map(({ value, label }) => (
+                      <div key={label}>
+                        <div className="text-2xl font-bold text-[#06b6d4]">{value}</div>
+                        <div className="text-xs text-[#94a3b8] mt-0.5">{label}</div>
+                      </div>
+                    ))}
+                  </div>
                 </div>
-              </div>
+              )}
             </div>
           ))}
         </div>
