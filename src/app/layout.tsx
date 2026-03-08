@@ -4,6 +4,8 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Analytics } from "@vercel/analytics/next";
+import { Suspense } from "react";
+import VisitorTracker from "@/components/VisitorTracker";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -32,6 +34,9 @@ export default function RootLayout({
         <main>{children}</main>
         <Footer />
         <Analytics />
+        <Suspense>
+          <VisitorTracker />
+        </Suspense>
       </body>
     </html>
   );
