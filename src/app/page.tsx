@@ -7,18 +7,17 @@ export default function Home() {
       {/* Hero */}
       <section className="bg-honeycomb min-h-screen flex items-center pt-20">
         <div className="max-w-5xl mx-auto px-6 py-24 w-full">
-          <p className="text-[#d97706] font-medium text-sm tracking-widest uppercase mb-4">
-            Product Strategy | Agentic AI | Data Products | UX Research
+          <p className="text-[#d97706] font-medium text-sm tracking-widest uppercase mb-4 flex gap-12">
+            <span>Product Strategy</span><span>|</span><span>Agentic AI</span><span>|</span><span>Data Products</span>
           </p>
           <div className="grid md:grid-cols-[70%_30%] gap-12 items-start">
             {/* Left — main content (70%) */}
             <div>
-              <h1 className="font-heading text-5xl md:text-7xl font-bold text-[#1a1a2e] leading-tight mb-6">
-                I help Product people blend data with research <span className="text-[#3b4f6b]">to make their product matter.</span>
+              <h1 className="font-heading text-4xl md:text-6xl font-bold text-[#1a1a2e] leading-tight mb-6">
+                Opinion builds products. Evidence builds businesses. <span className="text-[#3b4f6b]">I help Product people make the switch.</span>
               </h1>
               <p className="text-[#374151] text-xl md:text-2xl leading-relaxed mb-10">
-                Twenty years navigating the intersection of technology, people, and strategy —
-                from enterprise transformations to AI-powered products.
+                Twenty-five years in marketing and product taught me one thing: the biggest competitive edge isn't building something good, it's doing the research to know you're building the right thing. I build certified data products at the intersection of UX research, behavioral economics, and change management, bringing engineering closer to customers and the KPIs that matter. Now leading the shift where AI agents and agentic analytics replace traditional dashboards entirely.
               </p>
               <div className="flex flex-wrap gap-4">
                 <Link
@@ -54,26 +53,26 @@ export default function Home() {
       <section className="bg-grid py-24">
         <div className="max-w-5xl mx-auto px-6">
           <h2 className="font-heading text-3xl md:text-4xl font-bold text-[#1a1a2e] mb-4">
-            Connecting the dots others miss.
+            At the intersection of data, people, and strategy.
           </h2>
           <p className="text-[#6b7280] text-lg max-w-2xl mb-16">
-            My work lives at the edge of what&apos;s technical and what&apos;s human — where data tells a story, systems serve people, and change actually sticks.
+            My work lives at the edge of what&apos;s technical and what&apos;s human: where data tells a story, systems serve people, and change actually sticks.
           </p>
           <div className="grid md:grid-cols-3 gap-8">
             {[
               {
                 title: "Product Leadership",
-                desc: "Turning messy ambiguity into clear roadmaps, aligned teams, and shipped outcomes — at scale.",
+                desc: "Turning messy ambiguity into clear roadmaps, aligned teams, and shipped outcomes, at scale.",
                 color: "border-[#d97706]",
               },
               {
                 title: "AI & Technology",
-                desc: "Building with AI thoughtfully — not hype-first, but outcome-first. Azure certified, hands-on practitioner.",
+                desc: "Building with AI thoughtfully: not hype-first, but outcome-first. Azure certified, hands-on practitioner.",
                 color: "border-[#3b4f6b]",
               },
               {
                 title: "Change & People",
-                desc: "Prosci certified. Change that doesn't account for people isn't change — it's disruption with a timeline.",
+                desc: "Prosci certified. Change that doesn't account for people isn't change. It's disruption with a timeline.",
                 color: "border-[#c2612a]",
               },
             ].map(({ title, desc, color }) => (
@@ -118,7 +117,7 @@ export default function Home() {
             Credentials that mean something.
           </h2>
           <p className="text-[#a0a0b0] text-lg mb-10">
-            Not just logos on a page — each certification represents a capability I put to work.
+            Not just logos on a page. Each certification represents a capability I put to work.
           </p>
           <div className="flex flex-wrap gap-3 mb-10">
             {["Microsoft Azure", "Prosci Change Management", "More →"].map((cert) => (

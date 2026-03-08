@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Contact — Ben Poole",
+  title: "Contact | Ben Poole",
 };
 
 export default function Contact() {
@@ -13,7 +13,7 @@ export default function Contact() {
           Let&apos;s talk.
         </h1>
         <p className="text-[#6b7280] text-xl mb-16">
-          Whether you&apos;re building something new, navigating a hard change, or just want to connect — I&apos;d love to hear from you.
+          Whether you&apos;re building something new, navigating a hard change, or just want to connect. I&apos;d love to hear from you.
         </p>
 
         <div className="bg-[#faf7f2] border border-[#3b4f6b]/10 rounded p-8">

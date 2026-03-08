@@ -66,5 +66,13 @@ npm run dev     # http://localhost:3000
 ## Deploy
 Push to `main` — Vercel auto-deploys. No manual step needed.
 
+## Session Recap
+When asked "where did we leave off?" or a similar question, generate a session recap using git log and the Known TODOs list. Structure it exactly as:
+- **What were we most focused on accomplishing?**
+- **What problems did we work through?**
+- **What was a win?**
+- **What's something I learned?**
+- **What are our next logical steps?**
+
 ## Keeping This File Current
 Update with **surgical edits only** — check off TODOs, append new decisions, update changed values. Never rewrite the whole file. The goal is accuracy without wasting tokens, time, or processing.

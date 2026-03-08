@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Certifications — Ben Poole",
-  description: "Ben Poole's certifications in Microsoft Azure and Prosci Change Management — and the real work behind each one.",
+  title: "Certifications | Ben Poole",
+  description: "Ben Poole's certifications in Microsoft Azure and Prosci Change Management, and the real work behind each one.",
 };
 
 const certifications = [
@@ -10,13 +10,13 @@ const certifications = [
     name: "Microsoft Azure",
     issuer: "Microsoft",
     credential: "Azure Fundamentals (AZ-900)",
-    summary: "Cloud architecture and services — earned to put to work, not to hang on a wall.",
+    summary: "Cloud architecture and services, earned to put to work, not to hang on a wall.",
     description:
       "Azure certification gave me a rigorous foundation in cloud infrastructure: compute, networking, storage, identity, and security. More importantly, it gave me a shared vocabulary with engineering teams and the credibility to make architectural decisions that held up under scrutiny.",
     work: {
-      title: "Fintech Startup Scaling — $1B+ Valuation",
+      title: "Fintech Startup Scaling: $1B+ Valuation",
       detail:
-        "Contributed to cloud infrastructure strategy during a period of hypergrowth at a fintech startup. The challenge wasn't just scaling — it was scaling reliably, securely, and without proportional headcount growth. Cloud-native thinking was core to making that possible.",
+        "Contributed to cloud infrastructure strategy during a period of hypergrowth at a fintech startup. The challenge wasn't just scaling. It was scaling reliably, securely, and without proportional headcount growth. Cloud-native thinking was core to making that possible.",
       stats: [
         { value: "$1B+", label: "Valuation reached" },
         { value: "Cloud-native", label: "Architecture approach" },
@@ -32,11 +32,11 @@ const certifications = [
     credential: "Prosci Certified Change Practitioner",
     summary: "Technology without adoption is just expensive shelf-ware.",
     description:
-      "Prosci's ADKAR model is the most practical change management framework I've used — it focuses on individual transitions, not organizational charts. Getting certified formalized what I'd learned the hard way: that resistance is information, not a problem to be managed away.",
+      "Prosci's ADKAR model is the most practical change management framework I've used. It focuses on individual transitions, not organizational charts. Getting certified formalized what I'd learned the hard way: that resistance is information, not a problem to be managed away.",
     work: {
-      title: "Microsoft Teams Global Rollout — 30,000+ Employees",
+      title: "Microsoft Teams Global Rollout: 30,000+ Employees",
       detail:
-        "Led UX research and change management for one of the largest enterprise collaboration deployments of its kind. Built a 'Change Champions Community' embedded in business units across the organization. Ran industry-standard research to identify adoption barriers before launch — not after. The result was one of the faster large-scale Teams rollouts on record.",
+        "Led UX research and change management for one of the largest enterprise collaboration deployments of its kind. Built a 'Change Champions Community' embedded in business units across the organization. Ran industry-standard research to identify adoption barriers before launch, not after. The result was one of the faster large-scale Teams rollouts on record.",
       stats: [
         { value: "30K+", label: "Employees impacted" },
         { value: "Global", label: "Deployment scale" },

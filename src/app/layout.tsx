@@ -15,7 +15,7 @@ const lora = Lora({
 });
 
 export const metadata: Metadata = {
-  title: "Ben Poole — Product Leader & Technologist",
+  title: "Ben Poole | Product Leader & Technologist",
   description: "Product leader, technologist, and data storyteller helping organizations navigate change and build what's next.",
 };
 
