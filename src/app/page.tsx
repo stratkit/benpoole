@@ -18,7 +18,7 @@ export default function Home() {
                 <span className="block text-lg md:text-2xl text-[#3b4f6b] mt-2">I help product people apply Agentic AI, Data Analytics, and UX Research to make decisions on building and marketing their products.</span>
               </h1>
               <p className="text-[#cbd5e1] text-base md:text-lg leading-relaxed mb-10">
-                Twenty-five years in marketing and product taught me one thing: the biggest competitive edge isn't building something good, it's doing the research to know you're building the right thing. I build certified data products at the intersection of UX research, behavioral economics, and change management, bringing engineering closer to customers and the KPIs that matter. Now leading the shift where AI agents and agentic analytics replace traditional dashboards entirely.
+                All Product teams add features and build really great things, but they are often doing it without enough certainty. Certain that it's the right thing to build, from many different angles, lenses, and trade-offs. I bring Agentic AI and Customer Analytics to the art of Product Design and Marketing. I enjoy working across Product teams, bringing Engineering and Data Science closer to the customers, and business KPIs that matter. Everything is a product to me, including the very process that Data teams follow to better understand their products, their users' behavior and needs, and how they go to market, experiment, and engage feedback loops to unlock product growth and balance with stable, predictable systems.
               </p>
               <div className="flex flex-wrap gap-4">
                 <Link
