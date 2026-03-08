@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import ContactForm from "@/components/ContactForm";
 
 export const metadata: Metadata = {
   title: "Contact | Ben Poole",
@@ -17,23 +18,18 @@ export default function Contact() {
         </p>
 
         <div className="bg-[#1e293b] border border-[#3b4f6b]/10 rounded p-8">
-          <p className="text-[#94a3b8] text-sm mb-6">Contact form coming soon. In the meantime:</p>
+          <ContactForm />
+        </div>
+
+        <div className="mt-8 pt-8 border-t border-[#3b4f6b]/10">
           <a
-            href="mailto:ben@benpoole.me"
-            className="inline-block bg-[#020617] text-[#faf7f2] px-6 py-3 rounded text-sm font-medium hover:bg-[#3b4f6b] transition-colors"
+            href="https://linkedin.com/in/benpoole"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[#3b4f6b] text-sm font-medium hover:text-[#06b6d4] transition-colors"
           >
-            Email me at ben@benpoole.me
+            Connect on LinkedIn →
           </a>
-          <div className="mt-6 pt-6 border-t border-[#3b4f6b]/10">
-            <a
-              href="https://linkedin.com/in/benpoole"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-[#3b4f6b] text-sm font-medium hover:text-[#06b6d4] transition-colors"
-            >
-              Connect on LinkedIn →
-            </a>
-          </div>
         </div>
       </div>
     </div>

@@ -1,0 +1,80 @@
+"use client";
+
+import { useActionState } from "react";
+import { sendContactEmail, type FormState } from "@/app/contact/actions";
+
+const initialState: FormState = { status: "idle", message: "" };
+
+export default function ContactForm() {
+  const [state, action, pending] = useActionState(sendContactEmail, initialState);
+
+  return (
+    <form action={action} className="space-y-6">
+      <div className="grid sm:grid-cols-2 gap-6">
+        <div>
+          <label htmlFor="name" className="block text-sm font-medium text-[#94a3b8] mb-2">
+            Name
+          </label>
+          <input
+            id="name"
+            name="name"
+            type="text"
+            required
+            disabled={pending || state.status === "success"}
+            className="w-full bg-[#0f172a] border border-[#3b4f6b]/40 rounded px-4 py-3 text-[#f1f5f9] text-sm placeholder-[#475569] focus:outline-none focus:border-[#06b6d4] transition-colors disabled:opacity-50"
+            placeholder="Your name"
+          />
+        </div>
+        <div>
+          <label htmlFor="email" className="block text-sm font-medium text-[#94a3b8] mb-2">
+            Email
+          </label>
+          <input
+            id="email"
+            name="email"
+            type="email"
+            required
+            disabled={pending || state.status === "success"}
+            className="w-full bg-[#0f172a] border border-[#3b4f6b]/40 rounded px-4 py-3 text-[#f1f5f9] text-sm placeholder-[#475569] focus:outline-none focus:border-[#06b6d4] transition-colors disabled:opacity-50"
+            placeholder="you@example.com"
+          />
+        </div>
+      </div>
+
+      <div>
+        <label htmlFor="message" className="block text-sm font-medium text-[#94a3b8] mb-2">
+          Message
+        </label>
+        <textarea
+          id="message"
+          name="message"
+          rows={6}
+          required
+          disabled={pending || state.status === "success"}
+          className="w-full bg-[#0f172a] border border-[#3b4f6b]/40 rounded px-4 py-3 text-[#f1f5f9] text-sm placeholder-[#475569] focus:outline-none focus:border-[#06b6d4] transition-colors resize-none disabled:opacity-50"
+          placeholder="What's on your mind?"
+        />
+      </div>
+
+      {state.message && (
+        <p
+          className={`text-sm ${
+            state.status === "success" ? "text-[#06b6d4]" : "text-[#c2612a]"
+          }`}
+        >
+          {state.message}
+        </p>
+      )}
+
+      {state.status !== "success" && (
+        <button
+          type="submit"
+          disabled={pending}
+          className="bg-[#020617] text-[#faf7f2] px-8 py-3 rounded text-sm font-medium hover:bg-[#3b4f6b] transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+        >
+          {pending ? "Sending…" : "Send Message"}
+        </button>
+      )}
+    </form>
+  );
+}
