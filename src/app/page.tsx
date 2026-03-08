@@ -17,7 +17,7 @@ export default function Home() {
               {/* Photo — visible on mobile only, above headline */}
               <div className="flex md:hidden justify-center mb-8">
                 <Image
-                  src="/images/ben-poole.jpg"
+                  src="/images/professional2.png"
                   alt="Ben Poole"
                   width={200}
                   height={200}
@@ -50,7 +50,7 @@ export default function Home() {
             {/* Right — photo (30%), desktop only */}
             <div className="hidden md:flex justify-center">
               <Image
-                src="/images/ben-poole.jpg"
+                src="/images/professional2.png"
                 alt="Ben Poole"
                 width={320}
                 height={320}

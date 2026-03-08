@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import RandomQuote from "@/components/RandomQuote";
 
 export const metadata: Metadata = {
@@ -63,7 +64,7 @@ export default function About() {
             <div className="space-y-8">
               <div className="relative">
                 <Image
-                  src="/images/ben-poole.jpg"
+                  src="/images/action-LA.png"
                   alt="Ben Poole"
                   width={500}
                   height={500}
@@ -86,6 +87,28 @@ export default function About() {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Community */}
+      <section className="py-24 bg-[#020617]">
+        <div className="max-w-5xl mx-auto px-6 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+          <div>
+            <p className="text-[#06b6d4] font-medium text-xs tracking-widest uppercase mb-2">Community</p>
+            <h2 className="font-heading text-3xl font-bold text-[#faf7f2] mb-2">
+              Beyond the work.
+            </h2>
+            <p className="text-[#a0a0b0] text-lg max-w-xl">
+              I believe enterprise-grade thinking shouldn&apos;t be reserved for enterprises.
+              Here&apos;s how I bring that philosophy into the Omaha community.
+            </p>
+          </div>
+          <Link
+            href="/about/community"
+            className="shrink-0 border border-[#3b4f6b]/30 text-[#3b4f6b] px-6 py-3 rounded text-sm font-medium hover:border-[#3b4f6b] transition-colors"
+          >
+            Community involvement →
+          </Link>
         </div>
       </section>
 
