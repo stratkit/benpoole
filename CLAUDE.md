@@ -7,7 +7,7 @@ Ben Poole's personal portfolio site, to be hosted at `benpoole.me`. Replacing th
 - **Framework:** Next.js 16 (App Router), TypeScript
 - **Styling:** Tailwind CSS v4 — custom design system (see below)
 - **Fonts:** Lora (headings, serif), Inter (body, sans-serif) via Google Fonts
-- **Deployment:** Vercel (`benpoole.vercel.app` currently; `benpoole.me` when ready to cut over)
+- **Deployment:** Vercel — auto-deploys from `main` branch. Live at `benpoole.me` (DNS connected via Network Solutions, A record `216.198.79.1`)
 - **Repo:** `github.com/stratkit/benpoole`
 
 ## Design System
@@ -20,7 +20,7 @@ Ben Poole's personal portfolio site, to be hosted at `benpoole.me`. Replacing th
 src/app/
   page.tsx              Home — 70/30 hero (text + photo), expertise cards, blog/cert teasers
   about/page.tsx        Full bio, expertise threads, profile photo
-  certifications/page.tsx  Azure + Prosci cards with featured work panels
+  certifications/page.tsx  Azure + Prosci cards with featured work panels (FINRA Series 6 next)
   blog/page.tsx         Placeholder — posts coming
   contact/page.tsx      Email + LinkedIn, contact form coming
 
@@ -30,6 +30,13 @@ src/components/
 
 public/images/
   ben-poole.jpg         Profile photo (used on Home hero and About page)
+  cert-azure-func.png   Azure certification badge
+  cert-prosci.png       Prosci certification badge
+  cert-LUMA.png         LUMA certification badge
+  cert-aim.png          AIM certification badge
+  hdr-associate.png     HDR Associate badge
+  FINRA-series6.png     FINRA Series 6 badge
+  certs-and-awards.png, key-metrics.png, microsoft-paypal-*.png  — misc assets
 ```
 
 ## Nav Items
@@ -39,12 +46,16 @@ Home · About · Certifications · Blog · Contact
 Expertise is threaded throughout pages as narrative — not a flat skills list. Certifications page doubles as the Work/Case Studies section until work content grows enough to stand alone.
 
 ## Known TODOs
-- [ ] Connect Vercel to GitHub for auto-deploy on push (currently manual `vercel --prod`)
+- [x] Connect Vercel to GitHub for auto-deploy on push
+- [x] Connect `benpoole.me` domain (DNS via Network Solutions)
+- [x] Configure git identity (Ben Poole / benpoole@outlook.com)
+- [ ] Add FINRA Series 6 cert card — need Ben's Orion story to write featured work panel
+- [ ] Add LUMA, AIM, HDR Associate cert cards — need descriptions and work stories
+- [ ] Add cert badge images to all certification cards
 - [ ] Build working contact form
 - [ ] Write blog posts (MDX-based, no CMS needed for now)
-- [ ] Add more certifications
-- [ ] Cut over `benpoole.me` domain in Vercel settings (after contact form is live)
-- [ ] Configure git identity (`git config --global --edit`)
+- [ ] Cut over `benpoole.me` as primary (currently live but keeping stratkit up until contact form done)
+- [ ] Implement tag system across pages and blog posts (ultra-clean labels: Product | Data | AI | Strategy | GTM etc.)
 
 ## Local Dev
 ```bash
@@ -53,9 +64,7 @@ npm run dev     # http://localhost:3000
 ```
 
 ## Deploy
-```bash
-vercel --prod   # manual deploy until GitHub auto-deploy is connected
-```
+Push to `main` — Vercel auto-deploys. No manual step needed.
 
 ## Keeping This File Current
 Update with **surgical edits only** — check off TODOs, append new decisions, update changed values. Never rewrite the whole file. The goal is accuracy without wasting tokens, time, or processing.
