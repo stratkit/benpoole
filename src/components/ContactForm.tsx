@@ -1,6 +1,7 @@
 "use client";
 
 import { useActionState } from "react";
+import { useSearchParams } from "next/navigation";
 import { sendContactEmail, type FormState } from "@/app/contact/actions";
 
 const initialState: FormState = { status: "idle", message: "" };
@@ -15,9 +16,12 @@ const TOPICS = [
 
 export default function ContactForm() {
   const [state, action, pending] = useActionState(sendContactEmail, initialState);
+  const searchParams = useSearchParams();
+  const visitor = searchParams.get("visitor");
 
   return (
     <form action={action} className="space-y-6">
+      {visitor && <input type="hidden" name="visitor" value={visitor} />}
       <div className="grid sm:grid-cols-2 gap-6">
         <div>
           <label htmlFor="name" className="block text-sm font-medium text-[#94a3b8] mb-2">

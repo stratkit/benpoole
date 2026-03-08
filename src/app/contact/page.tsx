@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Suspense } from "react";
 import ContactForm from "@/components/ContactForm";
 
 export const metadata: Metadata = {
@@ -18,7 +19,9 @@ export default function Contact() {
         </p>
 
         <div className="bg-[#1e293b] border border-[#3b4f6b]/10 rounded p-8">
-          <ContactForm />
+          <Suspense>
+            <ContactForm />
+          </Suspense>
         </div>
 
         <div className="mt-8 pt-8 border-t border-[#3b4f6b]/10">
