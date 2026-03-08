@@ -17,7 +17,7 @@ export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-[#1a1a2e]/95 backdrop-blur-sm border-b border-[#3b4f6b]/30">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-[#1e293b]/95 backdrop-blur-sm border-b border-[#3b4f6b]/30">
       <div className="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
         <Link href="/" className="font-heading text-lg font-semibold text-[#faf7f2] tracking-tight">
           Ben Poole
@@ -31,7 +31,7 @@ export default function Header() {
               href={href}
               className={`text-sm font-medium transition-colors ${
                 pathname === href
-                  ? "text-[#d97706]"
+                  ? "text-[#06b6d4]"
                   : "text-[#a0a0b0] hover:text-[#faf7f2]"
               }`}
             >
@@ -58,14 +58,14 @@ export default function Header() {
 
       {/* Mobile menu */}
       {menuOpen && (
-        <div className="md:hidden bg-[#1a1a2e] border-t border-[#3b4f6b]/30 px-6 py-4 flex flex-col gap-4">
+        <div className="md:hidden bg-[#1e293b] border-t border-[#3b4f6b]/30 px-6 py-4 flex flex-col gap-4">
           {navLinks.map(({ href, label }) => (
             <Link
               key={href}
               href={href}
               onClick={() => setMenuOpen(false)}
               className={`text-sm font-medium ${
-                pathname === href ? "text-[#d97706]" : "text-[#a0a0b0]"
+                pathname === href ? "text-[#06b6d4]" : "text-[#a0a0b0]"
               }`}
             >
               {label}

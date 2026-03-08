@@ -4,7 +4,7 @@
   /* Colors */
   --color-cream: #faf7f2;
   --color-cream-dark: #f0ebe0;
-  --color-amber: #d97706;
+  --color-amber: #06b6d4;
   --color-amber-light: #fbbf24;
   --color-terracotta: #c2612a;
   --color-slate: #3b4f6b;
@@ -19,8 +19,8 @@
 }
 
 body {
-  background-color: #faf7f2;
-  color: #1a1a2e;
+  background-color: #0f172a;
+  color: #f1f5f9;
   font-family: var(--font-inter), system-ui, sans-serif;
 }
 
@@ -34,7 +34,7 @@ body {
 
 /* Engineering grid background — fine minor grid, bolder major grid, dots at intersections */
 .bg-honeycomb {
-  background-color: #faf7f2;
+  background-color: #0f172a;
   background-image:
     linear-gradient(to bottom right, rgba(59, 79, 107, 0.22) 0%, rgba(59, 79, 107, 0.06) 40%, transparent 70%),
     radial-gradient(circle, rgba(59, 79, 107, 0.18) 1px, transparent 1px),

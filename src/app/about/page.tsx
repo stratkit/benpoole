@@ -13,12 +13,12 @@ export default function About() {
       {/* Hero */}
       <section className="bg-honeycomb py-24">
         <div className="max-w-5xl mx-auto px-6">
-          <p className="text-[#d97706] font-medium text-sm tracking-widest uppercase mb-4">About</p>
-          <h1 className="font-heading text-4xl md:text-6xl font-bold text-[#1a1a2e] leading-tight mb-6">
+          <p className="text-[#06b6d4] font-medium text-sm tracking-widest uppercase mb-4">About</p>
+          <h1 className="font-heading text-4xl md:text-6xl font-bold text-[#f1f5f9] leading-tight mb-6">
             Move fast.<br />
             <span className="text-[#3b4f6b]">And fix things.</span>
           </h1>
-          <p className="text-[#374151] text-xl max-w-2xl leading-relaxed">
+          <p className="text-[#cbd5e1] text-xl max-w-2xl leading-relaxed">
             I started as a self-taught web developer with no formal training and no roadmap.
             That turned out to be an advantage.
           </p>
@@ -29,7 +29,7 @@ export default function About() {
       <section className="bg-grid py-24">
         <div className="max-w-5xl mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-16 items-start">
-            <div className="space-y-6 text-[#374151] leading-relaxed">
+            <div className="space-y-6 text-[#cbd5e1] leading-relaxed">
               <p className="text-lg">
                 My career has been a deliberate journey from building things to leading teams that build things, and eventually to shaping the strategy behind what gets built at all.
               </p>
@@ -45,14 +45,14 @@ export default function About() {
                 and turned messy data into decisions that actually stuck.
               </p>
               <p>
-                My philosophy is what I call <strong className="text-[#1a1a2e]">&ldquo;just enough&rdquo; CIO thinking</strong>: listening to users and interpreting targeted data yields better outcomes than complex frameworks and bloated governance. Technology should serve people, not the other way around.
+                My philosophy is what I call <strong className="text-[#f1f5f9]">&ldquo;just enough&rdquo; CIO thinking</strong>: listening to users and interpreting targeted data yields better outcomes than complex frameworks and bloated governance. Technology should serve people, not the other way around.
               </p>
               <p>
                 I believe enterprise-grade thinking shouldn&apos;t be reserved for enterprises. Smaller
                 organizations, nonprofits, and civic groups deserve the same strategic clarity, just delivered practically and without the overhead.
               </p>
 
-              <blockquote className="border-l-4 border-[#d97706] pl-5 italic text-[#6b7280]">
+              <blockquote className="border-l-4 border-[#06b6d4] pl-5 italic text-[#94a3b8]">
                 &ldquo;Plans in pencil, goals in pen.&rdquo;
               </blockquote>
             </div>
@@ -64,20 +64,20 @@ export default function About() {
                   alt="Ben Poole"
                   width={500}
                   height={500}
-                  className="rounded-xl object-cover w-full shadow-md"
+                  className="rounded-xl object-cover w-full shadow-md border-2 border-slate-300"
                 />
               </div>
 
               {/* Quick facts */}
-              <div className="bg-[#faf7f2] border border-[#3b4f6b]/10 rounded-xl p-6 space-y-4">
+              <div className="bg-[#1e293b] border border-[#3b4f6b]/10 rounded-xl p-6 space-y-4">
                 {[
                   { label: "Current focus", value: "AI-powered products & digital transformation" },
                   { label: "Background", value: "Product, UX, data, enterprise tech" },
                   { label: "Available for", value: "Speaking, consulting, advisory" },
                 ].map(({ label, value }) => (
                   <div key={label} className="flex flex-col">
-                    <span className="text-xs text-[#d97706] font-medium uppercase tracking-wider">{label}</span>
-                    <span className="text-[#1a1a2e] text-sm mt-0.5">{value}</span>
+                    <span className="text-xs text-[#06b6d4] font-medium uppercase tracking-wider">{label}</span>
+                    <span className="text-[#f1f5f9] text-sm mt-0.5">{value}</span>
                   </div>
                 ))}
               </div>
@@ -87,9 +87,9 @@ export default function About() {
       </section>
 
       {/* Expertise threads */}
-      <section className="py-24 bg-[#faf7f2]">
+      <section className="py-24 bg-[#0f172a]">
         <div className="max-w-5xl mx-auto px-6">
-          <h2 className="font-heading text-3xl font-bold text-[#1a1a2e] mb-12">
+          <h2 className="font-heading text-3xl font-bold text-[#f1f5f9] mb-12">
             Where I create the most impact.
           </h2>
           <div className="grid md:grid-cols-2 gap-6">
@@ -120,10 +120,10 @@ export default function About() {
               },
             ].map(({ title, desc }) => (
               <div key={title} className="flex gap-4">
-                <div className="w-1 bg-[#d97706] rounded-full shrink-0 mt-1" />
+                <div className="w-1 bg-[#06b6d4] rounded-full shrink-0 mt-1" />
                 <div>
-                  <h3 className="font-heading font-semibold text-[#1a1a2e] mb-1">{title}</h3>
-                  <p className="text-[#6b7280] text-sm leading-relaxed">{desc}</p>
+                  <h3 className="font-heading font-semibold text-[#f1f5f9] mb-1">{title}</h3>
+                  <p className="text-[#94a3b8] text-sm leading-relaxed">{desc}</p>
                 </div>
               </div>
             ))}
