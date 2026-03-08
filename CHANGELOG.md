@@ -12,6 +12,23 @@ All notable changes to benpoole.me are documented here.
 
 ---
 
+## [1.2.0] — 2026-03-08
+
+### Added
+- **Visitor tag tracking** — share personalized links like `benpoole.me?visitor=sandysmith` to identify who you sent a link to. When the visitor submits the contact form, the email includes `Visitor tag: sandysmith` so you know exactly who reached out.
+- **sessionStorage persistence** — the visitor tag is captured on any page and stored in the browser's `sessionStorage`. This means the tag survives normal navigation (About → Certifications → Contact) even though the query string is no longer in the URL. sessionStorage is a native browser API — no cookies, no database, no third-party service. It lives entirely in the visitor's browser tab and clears automatically when they close it. Nothing is sent to any server until the contact form is submitted.
+- **VisitorTracker component** — a silent, invisible client component added to the root layout (`src/components/VisitorTracker.tsx`). It runs on every page, checks for a `?visitor=` query param, and saves it to sessionStorage if found. Returns null — no UI rendered.
+
+### How it works end-to-end
+1. You share `benpoole.me?visitor=sandysmith` with a recruiter
+2. Sandy lands on the home page — VisitorTracker silently saves `sandysmith` to her browser tab
+3. Sandy browses around (About, Certifications, etc.) — tag stays in sessionStorage
+4. Sandy clicks Contact and submits the form
+5. You receive the email with `Visitor tag: sandysmith` in the body
+6. Sandy closes the tab — sessionStorage clears, nothing persists on her machine
+
+---
+
 ## [1.1.0] — 2026-03-08
 
 ### Added
