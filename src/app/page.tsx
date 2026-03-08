@@ -14,6 +14,16 @@ export default function Home() {
           <div className="grid md:grid-cols-[70%_30%] gap-12 items-start">
             {/* Left — main content (70%) */}
             <div>
+              {/* Photo — visible on mobile only, above headline */}
+              <div className="flex md:hidden justify-center mb-8">
+                <Image
+                  src="/images/ben-poole.jpg"
+                  alt="Ben Poole"
+                  width={200}
+                  height={200}
+                  className="rounded-2xl object-cover shadow-lg aspect-square border-2 border-slate-300"
+                />
+              </div>
               <h1 className="font-heading font-bold text-[#f1f5f9] leading-tight mb-6">
                 <span className="text-2xl md:text-4xl">Opinion builds a product, research builds a business.</span>
                 <span className="block text-lg md:text-2xl text-[#3b4f6b] mt-2">I help product people apply Agentic AI, Data Analytics, and UX Research to make decisions on building and marketing their products.</span>
@@ -37,7 +47,7 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Right — photo (30%) */}
+            {/* Right — photo (30%), desktop only */}
             <div className="hidden md:flex justify-center">
               <Image
                 src="/images/ben-poole.jpg"
