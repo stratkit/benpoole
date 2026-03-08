@@ -16,6 +16,7 @@ export async function sendContactEmail(
   const name = formData.get("name")?.toString().trim();
   const email = formData.get("email")?.toString().trim();
   const message = formData.get("message")?.toString().trim();
+  const topics = formData.getAll("topics").map((t) => t.toString());
 
   if (!name || !email || !message) {
     return { status: "error", message: "All fields are required." };
@@ -31,7 +32,7 @@ export async function sendContactEmail(
       to: "benpoole@outlook.com",
       replyTo: email,
       subject: `New message from ${name}`,
-      text: `Name: ${name}\nEmail: ${email}\n\n${message}`,
+      text: `Name: ${name}\nEmail: ${email}\n${topics.length ? `Topics: ${topics.join(", ")}\n` : ""}\n${message}`,
     });
 
     return { status: "success", message: "Message sent! I'll be in touch soon." };

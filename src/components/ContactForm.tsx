@@ -5,6 +5,14 @@ import { sendContactEmail, type FormState } from "@/app/contact/actions";
 
 const initialState: FormState = { status: "idle", message: "" };
 
+const TOPICS = [
+  "Product Strategy",
+  "Product Discovery",
+  "Product Analytics",
+  "Vendors and Tech Stack",
+  "Coffee / Cooking / Mixology",
+];
+
 export default function ContactForm() {
   const [state, action, pending] = useActionState(sendContactEmail, initialState);
 
@@ -38,6 +46,28 @@ export default function ContactForm() {
             className="w-full bg-[#0f172a] border border-[#3b4f6b]/40 rounded px-4 py-3 text-[#f1f5f9] text-sm placeholder-[#475569] focus:outline-none focus:border-[#06b6d4] transition-colors disabled:opacity-50"
             placeholder="you@example.com"
           />
+        </div>
+      </div>
+
+      <div>
+        <p className="block text-sm font-medium text-[#94a3b8] mb-3">
+          What would you like to talk over?
+        </p>
+        <div className="space-y-2">
+          {TOPICS.map((topic) => (
+            <label key={topic} className="flex items-center gap-3 cursor-pointer group">
+              <input
+                type="checkbox"
+                name="topics"
+                value={topic}
+                disabled={pending || state.status === "success"}
+                className="w-4 h-4 rounded border border-[#3b4f6b]/40 bg-[#0f172a] accent-[#06b6d4] disabled:opacity-50"
+              />
+              <span className="text-sm text-[#cbd5e1] group-hover:text-[#f1f5f9] transition-colors">
+                {topic}
+              </span>
+            </label>
+          ))}
         </div>
       </div>
 
