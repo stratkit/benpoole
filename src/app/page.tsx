@@ -13,10 +13,11 @@ export default function Home() {
           <div className="grid md:grid-cols-[70%_30%] gap-12 items-start">
             {/* Left — main content (70%) */}
             <div>
-              <h1 className="font-heading text-4xl md:text-6xl font-bold text-[#1a1a2e] leading-tight mb-6">
-                Opinion builds a product, research builds a business. <span className="text-[#3b4f6b]">I help product teams lead with UX research.</span>
+              <h1 className="font-heading font-bold text-[#1a1a2e] leading-tight mb-6">
+                <span className="text-2xl md:text-4xl">Opinion builds a product, research builds a business.</span>
+                <span className="block text-lg md:text-2xl text-[#3b4f6b] mt-2">I help product people apply Agentic AI, Data Analytics, and UX Research to make decisions on building and marketing their products.</span>
               </h1>
-              <p className="text-[#374151] text-xl md:text-2xl leading-relaxed mb-10">
+              <p className="text-[#374151] text-base md:text-lg leading-relaxed mb-10">
                 Twenty-five years in marketing and product taught me one thing: the biggest competitive edge isn't building something good, it's doing the research to know you're building the right thing. I build certified data products at the intersection of UX research, behavioral economics, and change management, bringing engineering closer to customers and the KPIs that matter. Now leading the shift where AI agents and agentic analytics replace traditional dashboards entirely.
               </p>
               <div className="flex flex-wrap gap-4">
