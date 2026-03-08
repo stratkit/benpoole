@@ -27,7 +27,7 @@ export async function sendContactEmail(
 
   try {
     await resend.emails.send({
-      from: "contact@benpoole.me",
+      from: "contact@mail.benpoole.me",
       to: "benpoole@outlook.com",
       replyTo: email,
       subject: `New message from ${name}`,
