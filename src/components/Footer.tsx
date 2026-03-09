@@ -15,7 +15,7 @@ export default function Footer() {
             LinkedIn
           </a>
           <a
-            href="mailto:ben@benpoole.me"
+            href="mailto:benpoole@outlook.com"
             className="text-sm text-[#6b7280] hover:text-[#06b6d4] transition-colors"
           >
             Email
