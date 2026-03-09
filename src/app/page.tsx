@@ -24,9 +24,9 @@ export default function Home() {
                   className="rounded-2xl object-cover shadow-lg aspect-square border-2 border-slate-300"
                 />
               </div>
-              <h1 className="font-heading font-bold text-[#f1f5f9] leading-tight mb-6">
-                <span className="text-2xl md:text-4xl">Opinion builds a product, research builds a business.</span>
-                <span className="block text-lg md:text-2xl text-[#3b4f6b] mt-2">I help product people apply Agentic AI, Data Analytics, and UX Research to make decisions on building and marketing their products.</span>
+              <h1 className="font-heading font-bold text-[#f1f5f9] leading-relaxed mb-8">
+                <span className="text-2xl md:text-4xl">Opinions build products. Research builds a business.</span>
+                <span className="block text-lg md:text-2xl text-[#3b4f6b] mt-4">I help product people apply Agentic AI, Data Analytics, and UX Research to make decisions on building and marketing their products.</span>
               </h1>
               <p className="text-[#cbd5e1] text-base md:text-lg leading-relaxed mb-10">
                 All Product teams add features and build really great things, but they are often doing it without enough certainty. Certain that it's the right thing to build, from many different angles, lenses, and trade-offs. I bring Agentic AI and Customer Analytics to the art of Product Design and Marketing. I enjoy working across Product teams, bringing Engineering and Data Science closer to the customers, and business KPIs that matter. Everything is a product to me, including the very process that Data teams follow to better understand their products, their users' behavior and needs, and how they go to market, experiment, and engage feedback loops to unlock product growth and balance with stable, predictable systems.
@@ -75,27 +75,30 @@ export default function Home() {
           <div className="grid md:grid-cols-3 gap-8">
             {[
               {
-                title: "Product Leadership",
+                title: "Product Strategy",
                 desc: "Turning messy ambiguity into clear roadmaps, aligned teams, and shipped outcomes, at scale.",
                 color: "border-[#06b6d4]",
+                icon: <svg className="w-8 h-8 text-[#06b6d4]" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>,
               },
               {
-                title: "AI & Technology",
+                title: "AI & Technology Adoption",
                 desc: "Building with AI thoughtfully: not hype-first, but outcome-first. Azure certified, hands-on practitioner.",
                 color: "border-[#3b4f6b]",
+                icon: <svg className="w-8 h-8 text-[#3b4f6b]" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24"><path d="M12 2a4 4 0 0 0-4 4v2a4 4 0 0 0 8 0V6a4 4 0 0 0-4-4Z"/><path d="M9 12l-4 8h14l-4-8"/><circle cx="12" cy="18" r="1"/></svg>,
               },
               {
-                title: "Change & People",
+                title: "Change + People",
                 desc: "Prosci certified. Change that doesn't account for people isn't change. It's disruption with a timeline.",
                 color: "border-[#c2612a]",
+                icon: <svg className="w-8 h-8 text-[#c2612a]" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>,
               },
-            ].map(({ title, desc, color }) => (
+            ].map(({ title, desc, color, icon }) => (
               <div
                 key={title}
                 className={`bg-[#1e293b] border-t-4 ${color} p-6 rounded shadow-sm`}
               >
-                <h3 className="font-heading text-xl font-semibold text-[#f1f5f9] mb-3">
-                  {title}
+                <h3 className="font-heading text-xl font-semibold text-[#f1f5f9] mb-3 flex items-center gap-3">
+                  {icon}{title}
                 </h3>
                 <p className="text-[#94a3b8] text-sm leading-relaxed">{desc}</p>
               </div>
@@ -128,17 +131,18 @@ export default function Home() {
       <section className="py-24 bg-[#020617]">
         <div className="max-w-5xl mx-auto px-6">
           <h2 className="font-heading text-3xl font-bold text-[#faf7f2] mb-2">
-            Credentials that mean something.
+            I put my credentials to work.
           </h2>
           <p className="text-[#a0a0b0] text-lg mb-10">
-            Not just logos on a page. Each certification represents a capability I put to work.
+            Every certification here connects to a project, a team, or an outcome I can point to.
           </p>
           <div className="flex flex-wrap gap-3 mb-10">
-            {["Microsoft Azure", "Prosci Change Management", "More →"].map((cert) => (
+            {["Microsoft Azure", "Prosci Change Management", "FINRA Series 6", "HDR Associate Professional", "AIM IT Leadership Academy", "LUMA Design Thinking"].map((cert) => (
               <span
                 key={cert}
-                className="bg-[#3b4f6b]/40 text-[#faf7f2] text-sm px-4 py-2 rounded-full border border-[#3b4f6b]"
+                className="bg-[#3b4f6b]/40 text-[#faf7f2] text-sm px-4 py-2 rounded-full border border-[#3b4f6b] flex items-center gap-2"
               >
+                <svg className="w-4 h-4 text-[#06b6d4] shrink-0" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>
                 {cert}
               </span>
             ))}
