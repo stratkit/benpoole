@@ -15,7 +15,7 @@ export default function Contact() {
           Let&apos;s talk.
         </h1>
         <p className="text-[#94a3b8] text-xl mb-16">
-          Whether you&apos;re building something new, navigating a hard change, or just want to connect. I&apos;d love to hear from you.
+          Need to implement Agentic AI or Product Analytics to push your Product to the next level? Time for a fresh approach to a large organizational change, or AI enablement for your teams? How about a strategic product partner?
         </p>
 
         <div className="bg-[#1e293b] border border-[#3b4f6b]/10 rounded p-8">

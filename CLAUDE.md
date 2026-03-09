@@ -52,7 +52,7 @@ Expertise is threaded throughout pages as narrative — not a flat skills list. 
 - [ ] Add FINRA Series 6 cert card — need Ben's Orion story to write featured work panel
 - [ ] Add LUMA, AIM, HDR Associate cert cards — need descriptions and work stories
 - [ ] Add cert badge images to all certification cards
-- [ ] Build working contact form
+- [x] Build working contact form
 - [ ] Write blog posts (MDX-based, no CMS needed for now)
 - [ ] Cut over `benpoole.me` as primary (currently live but keeping stratkit up until contact form done)
 - [ ] Implement tag system across pages and blog posts (ultra-clean labels: Product | Data | AI | Strategy | GTM etc.)
@@ -73,6 +73,9 @@ When asked "where did we leave off?" or a similar question, generate a session r
 - **What was a win?**
 - **What's something I learned?**
 - **What are our next logical steps?**
+
+## Writing Style
+- **No em dashes.** Use colons, commas, or separate sentences instead.
 
 ## Keeping This File Current
 Update with **surgical edits only** — check off TODOs, append new decisions, update changed values. Never rewrite the whole file. The goal is accuracy without wasting tokens, time, or processing.

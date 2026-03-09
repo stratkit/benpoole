@@ -6,11 +6,14 @@ import { sendContactEmail, type FormState } from "@/app/contact/actions";
 const initialState: FormState = { status: "idle", message: "" };
 
 const TOPICS = [
+  "Agentic AI",
+  "AI Enablement for the Org",
+  "Marketing/UX Research",
   "Product Strategy",
   "Product Discovery",
   "Product Analytics",
   "Vendors and Tech Stack",
-  "Coffee / Cooking / Mixology",
+  "Coffee / Cooking / Home Bar Mixology / Other?",
 ];
 
 export default function ContactForm() {
@@ -56,6 +59,21 @@ export default function ContactForm() {
       </div>
 
       <div>
+        <label htmlFor="message" className="block text-sm font-medium text-[#94a3b8] mb-2">
+          Message
+        </label>
+        <textarea
+          id="message"
+          name="message"
+          rows={6}
+          required
+          disabled={pending || state.status === "success"}
+          className="w-full bg-[#0f172a] border border-[#3b4f6b]/40 rounded px-4 py-3 text-[#f1f5f9] text-sm placeholder-[#475569] focus:outline-none focus:border-[#06b6d4] transition-colors resize-none disabled:opacity-50"
+          placeholder="What's on your mind?"
+        />
+      </div>
+
+      <div>
         <p className="block text-sm font-medium text-[#94a3b8] mb-3">
           What would you like to talk over?
         </p>
@@ -75,21 +93,6 @@ export default function ContactForm() {
             </label>
           ))}
         </div>
-      </div>
-
-      <div>
-        <label htmlFor="message" className="block text-sm font-medium text-[#94a3b8] mb-2">
-          Message
-        </label>
-        <textarea
-          id="message"
-          name="message"
-          rows={6}
-          required
-          disabled={pending || state.status === "success"}
-          className="w-full bg-[#0f172a] border border-[#3b4f6b]/40 rounded px-4 py-3 text-[#f1f5f9] text-sm placeholder-[#475569] focus:outline-none focus:border-[#06b6d4] transition-colors resize-none disabled:opacity-50"
-          placeholder="What's on your mind?"
-        />
       </div>
 
       {state.message && (

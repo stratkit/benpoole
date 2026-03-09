@@ -33,7 +33,7 @@ export async function sendContactEmail(
       to: "benpoole@outlook.com",
       replyTo: email,
       subject: `New message from ${name}`,
-      text: `Name: ${name}\nEmail: ${email}\n${visitor ? `Visitor tag: ${visitor}\n` : ""}${topics.length ? `Topics: ${topics.join(", ")}\n` : ""}\n${message}`,
+      text: `Name: ${name}\nEmail: ${email}\n${visitor ? `Visitor tag: ${visitor}\n` : ""}${topics.length ? `Topics:\n${topics.map((t) => `  - ${t}`).join("\n")}\n` : ""}\n${message}`,
     });
 
     return { status: "success", message: "Message sent! I'll be in touch soon." };
