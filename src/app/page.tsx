@@ -137,7 +137,7 @@ export default function Home() {
             Every certification here connects to a project, a team, or an outcome I can point to.
           </p>
           <div className="flex flex-wrap gap-3 mb-10">
-            {["Microsoft Azure", "Prosci Change Management", "FINRA Series 6", "HDR Associate Professional", "AIM IT Leadership Academy", "LUMA Design Thinking"].map((cert) => (
+            {["Microsoft Azure Certified", "Prosci Change Management", "FINRA Series 6", "HDR Associate Professional", "AIM IT Leadership Academy", "LUMA Design Thinking"].map((cert) => (
               <span
                 key={cert}
                 className="bg-[#3b4f6b]/40 text-[#faf7f2] text-sm px-4 py-2 rounded-full border border-[#3b4f6b] flex items-center gap-2"
