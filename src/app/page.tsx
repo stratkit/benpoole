@@ -23,7 +23,7 @@ export default function Home() {
                   height={200}
                   className="rounded-2xl object-cover shadow-lg aspect-square border-2 border-slate-300"
                 />
-                <p className="text-[#94a3b8] text-xs leading-relaxed mt-4 text-center px-4">
+                <p className="text-[#94a3b8] text-xs leading-relaxed mt-4 text-left px-4">
                   With roots in Financial Services and FinTech product development, I bring more than 25 years spanning product, marketing, data, and change management. Wealth management intuition is powerful on its own: supported by Agentic AI, analytics, and technology adoption, it becomes a force multiplier.
                 </p>
               </div>
@@ -59,7 +59,7 @@ export default function Home() {
                 height={320}
                 className="rounded-2xl object-cover shadow-lg w-full aspect-square border-2 border-slate-300"
               />
-              <p className="text-[#94a3b8] text-xs leading-relaxed mt-4 text-center">
+              <p className="text-[#94a3b8] text-xs leading-relaxed mt-4 text-left">
                 With roots in Financial Services and FinTech product development, I bring more than 25 years spanning product, marketing, data, and change management. Wealth management intuition is powerful on its own: supported by Agentic AI, analytics, and technology adoption, it becomes a force multiplier.
               </p>
             </div>
