@@ -9,13 +9,13 @@ export default function Home() {
       <section className="bg-honeycomb min-h-screen flex items-center pt-20">
         <div className="max-w-5xl mx-auto px-6 py-24 w-full">
           <p className="text-[#06b6d4] font-medium text-sm tracking-widest uppercase mb-4 flex gap-12">
-            <span>Product Strategy</span><span>|</span><span>Agentic AI</span><span>|</span><span>Data Products</span>
+            <span>Product Strategy</span><span>|</span><span>Agentic AI</span><span>|</span><span>Change Management</span>
           </p>
           <div className="grid md:grid-cols-[70%_30%] gap-12 items-start">
             {/* Left — main content (70%) */}
             <div>
               {/* Photo — visible on mobile only, above headline */}
-              <div className="flex md:hidden justify-center mb-8">
+              <div className="flex md:hidden flex-col items-center mb-8">
                 <Image
                   src="/images/professional2.png"
                   alt="Ben Poole"
@@ -23,6 +23,9 @@ export default function Home() {
                   height={200}
                   className="rounded-2xl object-cover shadow-lg aspect-square border-2 border-slate-300"
                 />
+                <p className="text-[#94a3b8] text-xs leading-relaxed mt-4 text-center px-4">
+                  With roots in Financial Services and FinTech product development, I bring more than 25 years spanning product, marketing, data, and change management. Wealth management intuition is powerful on its own: supported by Agentic AI, analytics, and technology adoption, it becomes a force multiplier.
+                </p>
               </div>
               <h1 className="font-heading font-bold text-[#f1f5f9] leading-relaxed mb-8">
                 <span className="text-2xl md:text-4xl">Opinions build products. Research builds a business.</span>
@@ -48,7 +51,7 @@ export default function Home() {
             </div>
 
             {/* Right — photo (30%), desktop only */}
-            <div className="hidden md:flex justify-center">
+            <div className="hidden md:flex flex-col items-center">
               <Image
                 src="/images/professional2.png"
                 alt="Ben Poole"
@@ -56,6 +59,9 @@ export default function Home() {
                 height={320}
                 className="rounded-2xl object-cover shadow-lg w-full aspect-square border-2 border-slate-300"
               />
+              <p className="text-[#94a3b8] text-xs leading-relaxed mt-4 text-center">
+                With roots in Financial Services and FinTech product development, I bring more than 25 years spanning product, marketing, data, and change management. Wealth management intuition is powerful on its own: supported by Agentic AI, analytics, and technology adoption, it becomes a force multiplier.
+              </p>
             </div>
           </div>
         </div>

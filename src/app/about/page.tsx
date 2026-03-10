@@ -38,7 +38,7 @@ export default function About() {
                 My career has been a deliberate journey from building things to leading teams that build things, and eventually to shaping the strategy behind what gets built at all.
               </p>
               <p>
-                I spent years in the trenches: writing code, designing interfaces, wrangling data.
+                I grew up alongside the internet, first transitioning my print design skills to building websites. To continue making an impact Marketing Financial Services firms, I learned Web Programming and Database development.
                 That hands-on foundation gives me something a lot of executives lack. I can actually talk to engineers, not just at them.
               </p>
               <p>
