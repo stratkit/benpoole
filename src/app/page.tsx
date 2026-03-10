@@ -155,6 +155,54 @@ export default function Home() {
           </Link>
         </div>
       </section>
+
+      {/* Analytics & Data Visualization */}
+      <section className="py-24 bg-grid">
+        <div className="max-w-5xl mx-auto px-6">
+          <h2 className="font-heading text-3xl md:text-4xl font-bold text-[#f1f5f9] mb-4">
+            Analytics, Data Analysis &amp; Visualization
+          </h2>
+          <p className="text-[#94a3b8] text-lg max-w-2xl mb-12">
+            Data tells a story when you know how to ask the right questions. I use Tableau and analytics workflows to surface insights that drive product decisions and business outcomes.
+          </p>
+          <div className="grid md:grid-cols-2 gap-8">
+            <div>
+              <div className="rounded-lg overflow-hidden shadow-lg border border-[#3b4f6b]/30">
+                <Image
+                  src="/images/tableau-analytics.png"
+                  alt="Tableau analytics dashboard showcasing data visualization and analysis"
+                  width={600}
+                  height={400}
+                  className="w-full h-auto"
+                />
+              </div>
+              <p className="text-[#94a3b8] text-sm leading-relaxed mt-6 pr-4">
+                Interactive dashboards are great for exploring key metrics and trends, or surfacing patterns that inform product decisions. These visualizations were specific to Nebraska voter registrations and trends. View more analytics projects and data visualizations on{" "}
+                <a
+                  href="https://public.tableau.com/app/profile/ben.poole2523/vizzes"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[#06b6d4] hover:underline"
+                >
+                  my Tableau Public profile
+                </a>
+                .
+              </p>
+            </div>
+            <div>
+              <div className="rounded-lg overflow-hidden shadow-lg border border-[#3b4f6b]/30">
+                <Image
+                  src="/images/tableau-analytics2.png"
+                  alt="Tableau data visualization highlighting Nebraska voter registration patterns and insights"
+                  width={600}
+                  height={400}
+                  className="w-full h-auto"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </>
   );
 }
