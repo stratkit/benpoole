@@ -30,7 +30,7 @@ export async function sendContactEmail(
   try {
     await resend.emails.send({
       from: "contact@mail.benpoole.me",
-      to: "benpoole@outlook.com",
+      to: process.env.CONTACT_EMAIL!,
       replyTo: email,
       subject: `New message from ${name}`,
       text: `Name: ${name}\nEmail: ${email}\n${visitor ? `Visitor tag: ${visitor}\n` : ""}${topics.length ? `Topics:\n${topics.map((t) => `  - ${t}`).join("\n")}\n` : ""}\n${message}`,
