@@ -126,6 +126,14 @@ mkdir -p ~/.claude/skills/session-recap
 
 Then create `~/.claude/skills/session-recap/SKILL.md` with the content above. That's all. Next time you open Claude Code, type `/session-recap` and it just works.
 
+## The gotcha: memory has to be current
+
+Here's something I learned the hard way. The skill pulls from auto-memory to build the recap. If Claude doesn't update the memory at the end of a session, the next recap is stale. You sit down, type `/session-recap`, and get a recap from two sessions ago. Not helpful.
+
+The fix: save a feedback memory telling Claude to always update `MEMORY.md` before ending a conversation. Something like "always update memory at end of session with what was accomplished and the last exchange." Once that feedback memory exists, Claude reads it at the start of every future conversation and knows the rule.
+
+This is the thing about building tools on top of AI: the tool is only as good as the habits around it. The skill itself is simple. The discipline of keeping the memory current is what makes it actually work.
+
 ## The real payoff
 
 The best AI workflows aren't about asking smarter questions. They're about removing the friction between sessions so you can stay in flow. This skill saves me five minutes every morning, but more importantly, it kills the cognitive tax of context-switching. You sit down, type one command, and you're right back in it.
