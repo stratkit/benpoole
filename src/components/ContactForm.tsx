@@ -1,7 +1,8 @@
 "use client";
 
-import { useActionState, useEffect, useState } from "react";
+import { useActionState, useEffect, useRef, useState } from "react";
 import { sendContactEmail, type FormState } from "@/app/contact/actions";
+import { Turnstile, type TurnstileInstance } from "@marsidev/react-turnstile";
 
 const initialState: FormState = { status: "idle", message: "" };
 
@@ -19,10 +20,17 @@ const TOPICS = [
 export default function ContactForm() {
   const [state, action, pending] = useActionState(sendContactEmail, initialState);
   const [visitor, setVisitor] = useState<string | null>(null);
+  const turnstileRef = useRef<TurnstileInstance>(null);
 
   useEffect(() => {
     setVisitor(sessionStorage.getItem("visitor"));
   }, []);
+
+  useEffect(() => {
+    if (state.status === "error") {
+      turnstileRef.current?.reset();
+    }
+  }, [state]);
 
   return (
     <form action={action} className="space-y-6">
@@ -94,6 +102,12 @@ export default function ContactForm() {
           ))}
         </div>
       </div>
+
+      <Turnstile
+        ref={turnstileRef}
+        siteKey={process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY!}
+        options={{ theme: "dark" }}
+      />
 
       {state.message && (
         <p

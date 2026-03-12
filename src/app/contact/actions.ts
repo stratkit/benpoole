@@ -27,6 +27,24 @@ export async function sendContactEmail(
     return { status: "error", message: "Please enter a valid email address." };
   }
 
+  const token = formData.get("cf-turnstile-response")?.toString();
+  if (!token) {
+    return { status: "error", message: "Please complete the verification." };
+  }
+
+  const turnstileRes = await fetch("https://challenges.cloudflare.com/turnstile/v0/siteverify", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      secret: process.env.TURNSTILE_SECRET_KEY,
+      response: token,
+    }),
+  });
+  const turnstileData = await turnstileRes.json();
+  if (!turnstileData.success) {
+    return { status: "error", message: "Verification failed. Please try again." };
+  }
+
   try {
     await resend.emails.send({
       from: "contact@mail.benpoole.me",

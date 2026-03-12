@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /contact
+Disallow: /certifications
+
+Sitemap: https://benpoole.me/sitemap.xml
