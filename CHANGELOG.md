@@ -32,7 +32,7 @@ All notable changes to benpoole.me are documented here.
 ## [1.1.0] — 2026-03-08
 
 ### Added
-- **Contact form** — fully functional form on `/contact` powered by Resend. Sends from `contact@mail.benpoole.me` to `benpoole@outlook.com` with reply-to set to the sender's address.
+- **Contact form** — fully functional form on `/contact` powered by Resend, with reply-to set to the sender's address.
 - **Topic checkboxes** — "What would you like to talk over?" section with five options: Product Strategy, Product Discovery, Product Analytics, Vendors and Tech Stack, Coffee/Cooking/Mixology. Selected topics included in email body.
 - **Form UX** — inline pending state ("Sending…"), success confirmation, and error messaging. Form fields disable on submit and lock after success.
 - **Resend domain verification** — `mail.benpoole.me` configured as sending subdomain to preserve root domain reputation.
