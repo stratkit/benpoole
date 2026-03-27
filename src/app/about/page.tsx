@@ -54,11 +54,11 @@ export default function About() {
                 I believe enterprise-grade thinking shouldn&apos;t be reserved for enterprises. Smaller
                 organizations, nonprofits, and civic groups deserve the same strategic clarity, just delivered practically and without the overhead.
               </p>
-<!--
+              {/*
               <blockquote className="border-l-4 border-[#06b6d4] pl-5 italic text-[#94a3b8]">
                 &ldquo;Plans in pencil, goals in pen.&rdquo;
               </blockquote>
-  -->
+              */}
             </div>
 
             <div className="space-y-8">
