@@ -24,7 +24,7 @@ export default function Home() {
                   className="rounded-2xl object-cover shadow-lg aspect-square border-2 border-slate-300"
                 />
                 <p className="text-[#94a3b8] text-xs leading-relaxed mt-4 text-left px-4">
-                  With roots in Financial Services and FinTech product development, I bring more than 25 years spanning product, marketing, data, and change management. Wealth management intuition is powerful on its own: supported by Agentic AI, analytics, and technology adoption, it becomes a force multiplier.
+                  With roots in 123 Financial Services and FinTech product development, I bring more than 25 years spanning product, marketing, data, and change management. Wealth management intuition is powerful on its own: supported by Agentic AI, analytics, and technology adoption, it becomes a force multiplier.
                 </p>
               </div>
               <h1 className="font-heading font-bold text-[#f1f5f9] leading-relaxed mb-8">
@@ -137,10 +137,10 @@ export default function Home() {
       <section className="py-24 bg-[#020617]">
         <div className="max-w-5xl mx-auto px-6">
           <h2 className="font-heading text-3xl font-bold text-[#faf7f2] mb-2">
-            I put my credentials to work.
+            Certifications
           </h2>
           <p className="text-[#a0a0b0] text-lg mb-10">
-            Every certification here connects to a project, a team, or an outcome I can point to.
+            I'm dedicated to being a lifelong (un)learner
           </p>
           <div className="flex flex-wrap gap-3 mb-10">
             {["Microsoft Azure Certified", "Prosci Change Management", "FINRA Series 6", "HDR Associate Professional", "AIM IT Leadership Academy", "LUMA Design Thinking"].map((cert) => (
