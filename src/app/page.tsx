@@ -28,11 +28,11 @@ export default function Home() {
                 </p>
               </div>
               <h1 className="font-heading font-bold text-[#f1f5f9] leading-relaxed mb-8">
-                <span className="text-2xl md:text-4xl">Opinions build products. Research builds a business.</span>
-                <span className="block text-lg md:text-2xl text-[#3b4f6b] mt-4">I help product people apply Agentic AI, Data Analytics, and UX Research to make decisions on building and marketing their products.</span>
+                <span className="text-2xl md:text-4xl">Opinions build features. Research builds a Product.</span>
+                <span className="block text-lg md:text-2xl text-[#3b4f6b] mt-4">I enjoy driving product strategy with a blend of Data Analytics and User Research. We are all shipping more with Agentic AI and rapid prototyping, making it more critical to answer the "why" behind building and marketing our products.</span>
               </h1>
               <p className="text-[#cbd5e1] text-base md:text-lg leading-relaxed mb-10">
-                All Product teams add features and build really great things, but they are often doing it without enough certainty. Certain that it's the right thing to build, from many different angles, lenses, and trade-offs. I bring Agentic AI and Customer Analytics to the art of Product Design and Marketing. I enjoy working across Product teams, bringing Engineering and Data Science closer to the customers, and business KPIs that matter. Everything is a product to me, including the very process that Data teams follow to better understand their products, their users' behavior and needs, and how they go to market, experiment, and engage feedback loops to unlock product growth and balance with stable, predictable systems.
+                With the ability to build rapidly, we risk moving forward without enough certainty. Certain that it's the right thing to build, from many different angles, lenses, and trade-offs. I bring Agentic AI and Customer Analytics to the art of Product Design and Marketing. I enjoy working across Product teams, bringing Engineering and Data Science closer to the customers, and business KPIs that matter. Everything is a product to me, including the very process that Data teams follow to better understand their products, their users' behavior and needs, and how they go to market, experiment, and engage feedback loops to unlock product growth and balance with stable, predictable systems.
               </p>
               <div className="flex flex-wrap gap-4">
                 <Link
@@ -73,7 +73,7 @@ export default function Home() {
       <section className="bg-grid py-24">
         <div className="max-w-5xl mx-auto px-6">
           <h2 className="font-heading text-3xl md:text-4xl font-bold text-[#f1f5f9] mb-4">
-            At the intersection of data, people, and strategy.
+            At the intersection of data analytics, people, and strategy.
           </h2>
           <p className="text-[#94a3b8] text-lg max-w-2xl mb-16">
             My work lives at the edge of what&apos;s technical and what&apos;s human: where data tells a story, systems serve people, and change actually sticks.
@@ -94,7 +94,7 @@ export default function Home() {
               },
               {
                 title: "Change + People",
-                desc: "Prosci certified. Change that doesn't account for people isn't change. It's disruption with a timeline.",
+                desc: "Prosci certified in Change Management Principles and ADKAR Methodology",
                 color: "border-[#c2612a]",
                 icon: <svg className="w-8 h-8 text-[#c2612a]" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>,
               },
