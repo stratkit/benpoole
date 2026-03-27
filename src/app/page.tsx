@@ -9,7 +9,7 @@ export default function Home() {
       <section className="bg-honeycomb min-h-screen flex items-center pt-20">
         <div className="max-w-5xl mx-auto px-6 py-24 w-full">
           <p className="text-[#06b6d4] font-medium text-sm tracking-widest uppercase mb-4 flex gap-12">
-            <span>Product Strategy</span><span>|</span><span>Agentic AI</span><span>|</span><span>Change Management</span>
+            <span>Product Strategy</span><span>|</span><span>AI & Analytics</span><span>|</span><span>Change Management</span>
           </p>
           <div className="grid md:grid-cols-[70%_30%] gap-12 items-start">
             {/* Left — main content (70%) */}
@@ -24,7 +24,7 @@ export default function Home() {
                   className="rounded-2xl object-cover shadow-lg aspect-square border-2 border-slate-300"
                 />
                 <p className="text-[#94a3b8] text-xs leading-relaxed mt-4 text-left px-4">
-                  With roots in 123 Financial Services and FinTech product development, I bring more than 25 years spanning product, marketing, data, and change management. Wealth management intuition is powerful on its own: supported by Agentic AI, analytics, and technology adoption, it becomes a force multiplier.
+                  With roots in AEC, construction, and FinTech, I bring 25 years of experience across product, marketing, data analytics, and change management. I enjoy turning complex data into clear, actionable insights by combining product intuition with Agentic AI, data analytics, and adoption strategies to help users make faster, more confident decisions and drive measurable outcomes.
                 </p>
               </div>
               <h1 className="font-heading font-bold text-[#f1f5f9] leading-relaxed mb-8">
@@ -60,7 +60,7 @@ export default function Home() {
                 className="rounded-2xl object-cover shadow-lg w-full aspect-square border-2 border-slate-300"
               />
               <p className="text-[#94a3b8] text-xs leading-relaxed mt-4 text-left">
-                With roots in AEC, Construction and FinTech product development, I bring more than 25 years spanning product, marketing, data, and change management. Wealth management intuition is powerful on its own: supported by Agentic AI, analytics, and technology adoption, it becomes a force multiplier.
+                With roots in AEC, construction, and FinTech, I bring 25 years of experience across product, marketing, data analytics, and change management. I enjoy turning complex data into clear, actionable insights by combining product intuition with Agentic AI, data analytics, and adoption strategies to help users make faster, more confident decisions and drive measurable outcomes.
               </p>
             </div>
           </div>
