@@ -23,8 +23,7 @@ export default function About() {
             <span className="text-[#3b4f6b]">And fix things.</span>
           </h1>
           <p className="text-[#cbd5e1] text-xl max-w-2xl leading-relaxed">
-            I started as a self-taught web developer with no formal training and no roadmap.
-            That turned out to be an advantage.
+            &ldquo;Goals in pen, plans in pencil.&rdquo;
           </p>
         </div>
       </section>
@@ -35,7 +34,7 @@ export default function About() {
           <div className="grid md:grid-cols-2 gap-16 items-start">
             <div className="space-y-6 text-[#cbd5e1] leading-relaxed">
               <p className="text-lg">
-                My career has been a deliberate journey from building things to leading teams that build things, and eventually to shaping the strategy behind what gets built at all.
+                As a leader in product and technology transformations, I partner across Product and Data Teams to bring clarity to complex challenges by connecting data products, Process management, marketing, UX research, and process design. I’m a strong advocate for developers, engineers, data scientists and business users, translating their unique perspectives into actionable roadmaps that bridge gaps, identify the trade-offs, and build shared understanding. 
               </p>
               <p>
                 I grew up alongside the internet, first transitioning my print design skills to building websites. To continue making an impact Marketing Financial Services firms, I learned Web Programming and Database development.
@@ -55,10 +54,11 @@ export default function About() {
                 I believe enterprise-grade thinking shouldn&apos;t be reserved for enterprises. Smaller
                 organizations, nonprofits, and civic groups deserve the same strategic clarity, just delivered practically and without the overhead.
               </p>
-
+<!--
               <blockquote className="border-l-4 border-[#06b6d4] pl-5 italic text-[#94a3b8]">
                 &ldquo;Plans in pencil, goals in pen.&rdquo;
               </blockquote>
+  -->
             </div>
 
             <div className="space-y-8">
