@@ -7,9 +7,9 @@ export default function Home() {
     <>
       {/* Hero */}
       <section className="bg-honeycomb min-h-screen flex items-center pt-20">
-        <div className="max-w-5xl mx-auto px-6 py-24 w-full">
-          <p className="text-[#06b6d4] font-medium text-sm tracking-widest uppercase mb-4 flex gap-12">
-            <span>Product Strategy</span><span>|</span><span>AI & Analytics</span><span>|</span><span>Change Management</span>
+        <div className="max-w-5xl mx-auto px-6 pt-2 pb-24 w-full">
+          <p className="text-[#06b6d4] font-medium text-sm tracking-widest uppercase mb-18 flex gap-12">
+            <span>Product Strategy</span><span>|</span><span>AI & Data</span><span>|</span><span>Change Management</span><span>|</span><span>Marketing & UX</span>
           </p>
           <div className="grid md:grid-cols-[70%_30%] gap-12 items-start">
             {/* Left — main content (70%) */}
@@ -28,7 +28,9 @@ export default function Home() {
                 </p>
               </div>
               <h1 className="font-heading font-bold text-[#f1f5f9] leading-relaxed mb-8">
-                <span className="text-2xl md:text-4xl">Opinions build features. <br />Research builds a Product.</span>
+                <span className="text-2xl md:text-4xl">Opinions build features.</span>
+                <div style={{ marginBottom: "15px" }}></div>
+                <span className="text-2xl md:text-4xl">Research builds a Product.</span>
                 <span className="block text-lg md:text-2xl text-[#3b4f6b] mt-4">I enjoy driving product strategy with a blend of Data Analytics and User Research. We are all shipping more with Agentic AI and rapid prototyping, making it more critical to answer the "why" behind building and marketing our products.</span>
               </h1>
               <p className="text-[#cbd5e1] text-base md:text-lg leading-relaxed mb-10">
