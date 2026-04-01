@@ -140,8 +140,17 @@ export default function Home() {
             Certifications
           </h2>
           <p className="text-[#a0a0b0] text-lg mb-10">
-            I'm dedicated to being a lifelong (un)learner
+            Lifelong un-learner
           </p>
+          <div className="mb-10">
+            <Image
+              src="/images/certs.png"
+              alt="Certification badges: Prosci ADKAR, AIM IT Leadership Academy, Microsoft Azure Fundamentals, HDR Associate, FINRA Series 6"
+              width={2018}
+              height={380}
+              className="w-full h-auto rounded-xl border border-[#3b4f6b]/30"
+            />
+          </div>
           <div className="flex flex-wrap gap-3 mb-10">
             {["Microsoft Azure Certified", "Prosci Change Management", "FINRA Series 6", "HDR Associate Professional", "AIM IT Leadership Academy", "LUMA Design Thinking"].map((cert) => (
               <span
