@@ -27,7 +27,7 @@ export default function Home() {
                   With roots in AEC, construction, and FinTech, I bring 25 years of experience across product, marketing, data analytics, and change management. I enjoy turning complex data into clear, actionable insights by combining product intuition with Agentic AI, data analytics, and adoption strategies to help users make faster, more confident decisions and drive measurable outcomes.
                 </p>
               </div>
-              <h1 className="font-heading font-bold text-[#f1f5f9] leading-[3.5] text-2xl md:text-4xl mb-8">
+              <h1 className="font-heading font-bold text-[#f1f5f9] leading-[1.5] text-2xl md:text-4xl mb-8">
                 If Product is the art of what&apos;s possible, Data is the art of what&apos;s knowable.
               </h1>
               <p className="text-lg md:text-2xl text-[#3b4f6b] mb-8">
