@@ -27,10 +27,12 @@ export default function Home() {
                   With roots in AEC, construction, and FinTech, I bring 25 years of experience across product, marketing, data analytics, and change management. I enjoy turning complex data into clear, actionable insights by combining product intuition with Agentic AI, data analytics, and adoption strategies to help users make faster, more confident decisions and drive measurable outcomes.
                 </p>
               </div>
-              <h1 className="font-heading font-bold text-[#f1f5f9] leading-relaxed mb-8">
-                <span className="text-2xl md:text-4xl">If Product is the art of what&apos;s possible, Data is the art of what&apos;s knowable.</span>
-                <span className="block text-lg md:text-2xl text-[#3b4f6b] mt-4">I enjoy driving product strategy with a blend of Data Analytics and User Research. We are all shipping more with Agentic AI and rapid prototyping, making it more critical to answer the "why" behind building and marketing our products.</span>
+              <h1 className="font-heading font-bold text-[#f1f5f9] leading-[3.5] text-2xl md:text-4xl mb-8">
+                If Product is the art of what&apos;s possible, Data is the art of what&apos;s knowable.
               </h1>
+              <p className="text-lg md:text-2xl text-[#3b4f6b] mb-8">
+                I enjoy driving product strategy with a blend of Data Analytics and User Research. We are all shipping more with Agentic AI and rapid prototyping, making it more critical to answer the &ldquo;why&rdquo; behind building and marketing our products.
+              </p>
               <p className="text-[#cbd5e1] text-base md:text-lg leading-relaxed mb-10">
                 With the ability to build rapidly, we risk moving forward without enough certainty. Certain that it's the right thing to build, from many different angles, lenses, and trade-offs. I bring Agentic AI and Customer Analytics to the art of Product Design and Marketing. I enjoy working across Product teams, bringing Engineering and Data Science closer to the customers, and business KPIs that matter. Everything is a product to me, including the very process that Data teams follow to better understand their products, their users' behavior and needs, and how they go to market, experiment, and engage feedback loops to unlock product growth and balance with stable, predictable systems.
               </p>
