@@ -19,14 +19,11 @@ export default function Blog() {
             Blog
           </p>
           <h1 className="font-heading text-4xl md:text-5xl font-bold text-[#f1f5f9] mb-4 leading-tight">
-            Thinking out loud.
+            Opinions build features. Research builds a Product.
           </h1>
           <p className="text-[#94a3b8] text-xl">
             Perspectives on AI, product, leadership, and the messy middle of
             getting things done.
-          </p>
-          <p className="text-[#f1f5f9]/60 text-lg italic mt-3">
-            Opinions build features. Research builds a Product.
           </p>
         </div>
       </section>
