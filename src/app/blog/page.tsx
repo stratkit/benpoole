@@ -25,6 +25,9 @@ export default function Blog() {
             Perspectives on AI, product, leadership, and the messy middle of
             getting things done.
           </p>
+          <p className="text-[#f1f5f9]/60 text-lg italic mt-3">
+            Opinions build features. Research builds a Product.
+          </p>
         </div>
       </section>
 

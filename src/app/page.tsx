@@ -28,9 +28,7 @@ export default function Home() {
                 </p>
               </div>
               <h1 className="font-heading font-bold text-[#f1f5f9] leading-relaxed mb-8">
-                <span className="text-2xl md:text-4xl">Opinions build features.</span>
-                <div style={{ marginBottom: "15px" }}></div>
-                <span className="text-2xl md:text-4xl">Research builds a Product.</span>
+                <span className="text-2xl md:text-4xl">If Product is the art of what&apos;s possible, Data is the art of what&apos;s knowable.</span>
                 <span className="block text-lg md:text-2xl text-[#3b4f6b] mt-4">I enjoy driving product strategy with a blend of Data Analytics and User Research. We are all shipping more with Agentic AI and rapid prototyping, making it more critical to answer the "why" behind building and marketing our products.</span>
               </h1>
               <p className="text-[#cbd5e1] text-base md:text-lg leading-relaxed mb-10">
