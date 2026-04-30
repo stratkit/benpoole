@@ -22,9 +22,6 @@ export default function About() {
             Move fast<br />
             <span className="text-[#3b4f6b]">and fix things.</span>
           </h1>
-          <p className="text-[#cbd5e1] text-xl max-w-2xl leading-relaxed">
-            &ldquo;Goals in pen, plans in pencil.&rdquo;
-          </p>
         </div>
       </section>
 
@@ -32,27 +29,21 @@ export default function About() {
       <section className="bg-grid py-24">
         <div className="max-w-5xl mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-16 items-start">
-            <div className="space-y-6 text-[#cbd5e1] leading-relaxed">
+            <div className="space-y-6 text-[#cbd5e1] leading-relaxed md:-mt-16">
               <p className="text-lg">
-                As a leader in product and technology transformations, I partner across Product and Data Teams to bring clarity to complex challenges by connecting data products, Process management, marketing, UX research, and process design. I’m a strong advocate for developers, engineers, data scientists and business users, translating their unique perspectives into actionable roadmaps that bridge gaps, identify the trade-offs, and build shared understanding. 
+                I&apos;m a product and technology leader who helps teams replace opinion-driven roadmaps with evidence-driven ones. In a world where AI makes output cheap, that shift is the difference between shipping more and shipping what matters.
+              </p>
+              <blockquote className="border-l-4 border-[#06b6d4] pl-5 italic text-[#94a3b8]">
+                &ldquo;Goals in pen, plans in pencil.&rdquo;
+              </blockquote>
+              <p>
+                My work sits where there&apos;s a common gap: between technical depth and business outcomes. I partner across Data Science, Engineering, Product Analytics, and Marketing to turn complex inputs (models, data, customer signal) into decisions leadership can actually act on. That&apos;s where trade-offs become visible instead of buried.
               </p>
               <p>
-                I grew up alongside the internet, first transitioning my print design skills to building websites. To continue making an impact Marketing Financial Services firms, I learned Web Programming and Database development.
-                That hands-on foundation gives me something a lot of executives lack. I can actually talk to engineers, not just at them.
+                That foundation took me into strategic leadership. I scaled a FinTech startup past a $1B valuation and led global UX for one of the largest Microsoft Teams deployments ever: 30,000+ employees across multiple countries. Today I lead a team of Data Product Managers and Analysts, partnered across Data Science, Data Engineering, and Product Analytics. Recent work: a Data Catalog that gave my organization structured visibility into its data assets for the first time, and an Executive Monitoring Board that turns KPIs into action for leadership, both built using Claude Code, Cursor, and MCPs to wire modern AI into how the business reads and acts on its data.
               </p>
               <p>
-                Over time I moved into strategic technology leadership. I helped scale a fintech startup
-                to a $1B+ valuation. I led the global UX research and change management effort for one
-                of the largest Microsoft Teams deployments ever, reaching 30,000+ employees across multiple countries.
-                I&apos;ve managed enterprise vendor relationships, built product roadmaps from scratch,
-                and turned messy data into decisions that actually stuck.
-              </p>
-              <p>
-                My philosophy is what I call <strong className="text-[#f1f5f9]">&ldquo;just enough&rdquo; CIO thinking</strong>: listening to users and interpreting targeted data yields better outcomes than complex frameworks and bloated governance. Technology should serve people, not the other way around.
-              </p>
-              <p>
-                I believe enterprise-grade thinking shouldn&apos;t be reserved for enterprises. Smaller
-                organizations, nonprofits, and civic groups deserve the same strategic clarity, just delivered practically and without the overhead.
+                My belief: technology should serve people, not the other way around. The path there runs through listening to users and reading the right data, not louder opinions in the room. That belief travels well, inside a Product org or alongside one. Enterprise-grade thinking shouldn&apos;t be reserved for enterprises; smaller organizations, nonprofits, and civic groups deserve the same clarity, delivered practically.
               </p>
               {/*
               <blockquote className="border-l-4 border-[#06b6d4] pl-5 italic text-[#94a3b8]">
@@ -61,7 +52,7 @@ export default function About() {
               */}
             </div>
 
-            <div className="space-y-8">
+            <div className="space-y-8 md:-mt-[22rem]">
               <div className="relative">
                 <Image
                   src="/images/action-LA.png"

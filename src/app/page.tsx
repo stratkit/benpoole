@@ -31,10 +31,18 @@ export default function Home() {
                 If Product is the art of what&apos;s possible, Data is the art of what&apos;s knowable.
               </h1>
               <p className="text-lg md:text-2xl text-[#3b4f6b] mb-8">
-                I enjoy driving product strategy with a blend of Data Analytics and User Research. We are all shipping more with Agentic AI and rapid prototyping, making it more critical to answer the &ldquo;why&rdquo; behind building and marketing our products.
+                Together, they are the art of what's needed. 
               </p>
               <p className="text-[#cbd5e1] text-base md:text-lg leading-relaxed mb-10">
+                  Agentic tools & models make output less expensive; but cheap output isn't impact.
+              </p>
+              <p className="text-[#cbd5e1] text-sm md:text-base leading-relaxed mb-12">
+                And when anyone can build anything, the hard part is knowing what's worth building. I'm a Senior product leader with 25 years of experience answering that question. I've spent my career bringing UX, Product, Engineering, Data Science, and Marketing closer to customers and the KPIs that matter: turning opinion-driven roadmaps into evidence-driven decisions. I bring Agentic AI and Customer Analytics to that work, so Product teams can move at AI speed without losing the plot on what's worth shipping.
+              
+              {/*}
+                We are all prototyping and shipping more with Agentic AI, making it critical to answer the &ldquo;why&rdquo; behind building and marketing our products.
                 With the ability to build rapidly, we risk moving forward without enough certainty. Certain that it's the right thing to build, from many different angles, lenses, and trade-offs. I bring Agentic AI and Customer Analytics to the art of Product Design and Marketing. I enjoy working across Product teams, bringing Engineering and Data Science closer to the customers, and business KPIs that matter. Everything is a product to me, including the very process that Data teams follow to better understand their products, their users' behavior and needs, and how they go to market, experiment, and engage feedback loops to unlock product growth and balance with stable, predictable systems.
+                */}
               </p>
               <div className="flex flex-wrap gap-4">
                 <Link
