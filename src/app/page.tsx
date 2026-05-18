@@ -1,8 +1,11 @@
 import Link from "next/link";
 import Image from "next/image";
 import RandomQuote from "@/components/RandomQuote";
+import { getAllPosts } from "@/lib/posts";
 
 export default function Home() {
+  const featuredPosts = getAllPosts().slice(0, 2);
+
   return (
     <>
       {/* Hero */}
@@ -125,21 +128,64 @@ export default function Home() {
 
       {/* Blog teaser */}
       <section className="py-24 bg-[#1e293b]">
-        <div className="max-w-5xl mx-auto px-6 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
-          <div>
-            <h2 className="font-heading text-3xl font-bold text-[#f1f5f9] mb-2">
-              Thinking out loud.
-            </h2>
-            <p className="text-[#94a3b8] text-lg">
-              Perspectives on AI, product, leadership, and the messy middle of getting things done.
-            </p>
+        <div className="max-w-5xl mx-auto px-6">
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-10">
+            <div>
+              <h2 className="font-heading text-3xl font-bold text-[#f1f5f9] mb-2">
+                What&apos;s worth building.
+              </h2>
+              <p className="text-[#94a3b8] text-lg">
+                Perspectives on AI, product, leadership, and the messy middle of getting things done.
+              </p>
+            </div>
+            <Link
+              href="/blog"
+              className="text-[#06b6d4] text-sm font-medium hover:underline shrink-0"
+            >
+              All posts →
+            </Link>
           </div>
-          <Link
-            href="/blog"
-            className="shrink-0 bg-[#1e293b] border border-[#3b4f6b]/30 text-[#3b4f6b] px-6 py-3 rounded text-sm font-medium hover:border-[#3b4f6b] transition-colors"
-          >
-            Read the Blog →
-          </Link>
+          {featuredPosts.length > 0 && (
+            <div className="grid md:grid-cols-2 gap-6">
+              {featuredPosts.map((post) => (
+                <Link
+                  key={post.slug}
+                  href={`/blog/${post.slug}`}
+                  className="block group"
+                >
+                  <article className="h-full bg-[#020617] border border-[#3b4f6b]/30 rounded-xl p-6 hover:border-[#06b6d4]/50 transition-colors">
+                    <div className="flex items-center gap-3 text-xs text-[#94a3b8] mb-3">
+                      <time>
+                        {new Date(post.date).toLocaleDateString("en-US", {
+                          year: "numeric",
+                          month: "short",
+                          day: "numeric",
+                        })}
+                      </time>
+                      <span>&middot;</span>
+                      <span>{post.readingTime}</span>
+                    </div>
+                    <h3 className="font-heading text-xl font-bold text-[#f1f5f9] group-hover:text-[#06b6d4] transition-colors mb-3 leading-snug">
+                      {post.title}
+                    </h3>
+                    <p className="text-[#cbd5e1] text-sm leading-relaxed mb-4">
+                      {post.description}
+                    </p>
+                    <div className="flex flex-wrap gap-2">
+                      {post.tags.map((tag) => (
+                        <span
+                          key={tag}
+                          className="text-xs px-3 py-1 rounded-full bg-[#06b6d4]/10 text-[#06b6d4]"
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                  </article>
+                </Link>
+              ))}
+            </div>
+          )}
         </div>
       </section>
 
