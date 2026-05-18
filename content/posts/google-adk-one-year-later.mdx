@@ -1,0 +1,52 @@
+---
+title: "A Year with Google's ADK: What Aged Well, What Didn't"
+date: "2026-05-18"
+tags: ["AI", "Agents", "Google ADK", "Looking Back"]
+description: "Last April I published a LinkedIn article about building multi-agent workflows with Google's Agent Development Kit, days after it launched. A lot has changed since then. Some of it aged well, and some of it really didn't."
+---
+
+*A look back at [Beyond Copilot: Building Smart Multi-Agent AI Workflows](https://www.linkedin.com/pulse/beyond-copilot-building-smart-multi-agent-ai-workflows-ben-poole-hvefc/), one year later.*
+
+## The setup
+
+In April 2025, days after Google announced the Agent Development Kit (ADK) at Cloud Next, I sat down to build something with it. I wrote a LinkedIn article about the experience and made an argument I still believe: that the interesting thing about agents isn't the chat interface, it's the workflow underneath. Agents that own real business processes, route between tools, and run server-side as part of the product. Not another copilot in the corner of the screen.
+
+That was thirteen months ago. ADK was on version 0.0.3 when I published. It is now a multi-language framework with a real deploy story, a cross-agent protocol, and an integrations ecosystem. Some of what I wrote held up. Some of it is already out of date. Here is the honest accounting.
+
+## What aged well
+
+**The thesis.** The core argument was that agents are valuable when they own workflows, not conversations. A year of watching the space has only reinforced that. Every serious agent deployment I have seen since then has been agent-as-backend-service, not agent-as-chat-UI. The framing of "logic-driven, tool-using assistants that can own actual workflows" reads less like a prediction now and more like a description of where the market actually went.
+
+**Separation of concerns across agents.** The pattern I demonstrated, with a root agent delegating to specialized sub-agents that each carry only the context they need, is now the dominant multi-agent design pattern. It is what people mean when they say "orchestrator-worker." It scales because each agent has a narrow job and a narrow context window, and you can test them in isolation.
+
+**The skepticism about UI deployment.** I called out at the end of the article that ADK was optimized for the command line and that pushing it into a web app (I was trying Streamlit) was a friction point. That turned out to be a real signal about where the framework was, not a personal gripe. Google clearly heard the same feedback from a lot of developers, because the deploy story is now one of the biggest things they have built out.
+
+## What didn't
+
+**The model.** I built the demo on `gemini-2.0-flash-exp`. That model is being deprecated on June 1, 2026, which is roughly two weeks from when I am writing this. Anyone copying the code from my article today should swap it for `gemini-2.5-flash`. In most cases, that is a one-line change. It is also a reminder that anything you publish about a specific model name has a fixed shelf life.
+
+**"Python-only" framed the whole article.** ADK is no longer a Python framework with a Python audience. Python 1.0 shipped in May 2025. Java 1.0 followed. Go 1.0 followed that. TypeScript is in the mix now too. If I were writing the article today, I would lead with the language choice as a design decision, not assume Python.
+
+**The "deployment friction" critique.** This was fair at the time, and it is mostly fixed now. Google built out Agent Engine, a managed runtime on Vertex AI specifically for ADK agents. The pattern I was reaching for in the original article (agent runs server-side, exposes an API, a UI talks to it) is now the supported path, not the workaround.
+
+**Multi-agent coordination as a custom problem.** I treated agent-to-agent delegation as something you wire up yourself inside the orchestrator. Google has since shipped the Agent2Agent (A2A) protocol, which standardizes how agents in different languages and even different frameworks talk to each other. The hand-rolled orchestration in my demo is now a solved problem with a real protocol behind it.
+
+**The hand-built CSV tool.** I wrote a `search_projects` tool from scratch to query a mock dataset. As of February 2026, ADK has a curated integrations ecosystem covering data stores (Pinecone, Chroma, MongoDB), project management (Linear, Asana, Notion, Atlassian), code platforms (GitHub, GitLab), and observability (Arize, MLflow, AgentOps). The "build your own tool for every data source" assumption I baked into the article is no longer the right starting point.
+
+## A few things I didn't see coming
+
+**Human-in-the-loop as a first-class primitive.** ADK now has `ToolConfirmation`, which lets an agent pause execution and wait for a human to approve a sensitive tool call before proceeding. This is the kind of thing that sounds boring and turns out to be the difference between an agent you can ship to production and one you cannot. I wish I had emphasized it more in the original.
+
+**Observability built in.** ADK Go ships with native OpenTelemetry integration. Every model call and tool execution emits structured traces and spans. This was not on my radar a year ago. It is now obvious that debuggability is one of the hardest problems in multi-agent systems, and I am glad Google built it in rather than leaving it to the ecosystem.
+
+**YAML configuration.** You can now define agents declaratively in YAML instead of Python. I would not have predicted this a year ago, and I am genuinely not sure yet whether it is the right move for most teams. But it exists, and it tells you something about who Google is trying to bring into the ecosystem.
+
+## The takeaway
+
+When you publish something about a specific tool, especially a brand-new one, you are mostly betting on the architecture argument, not the code. The code rots. The framing either holds up or it doesn't.
+
+The architecture argument from my original article (agents own workflows, not conversations; separation of concerns; server-side, not chat-UI) held up. The specific code did not. That feels about right for a framework that was four days old when I wrote about it.
+
+If you are starting fresh with ADK today, the [official docs](https://google.github.io/adk-docs/) are dramatically better than they were a year ago, and the [release notes](https://google.github.io/adk-docs/release-notes/) are worth a scroll. The original LinkedIn article is still up [here](https://www.linkedin.com/pulse/beyond-copilot-building-smart-multi-agent-ai-workflows-ben-poole-hvefc/), with the caveats above.
+
+The fun part about writing in public is that the post is a snapshot. The post-mortem is the part you learn from.
