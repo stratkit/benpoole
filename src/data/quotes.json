@@ -1,6 +1,6 @@
 [
   {
-    "text": "Opinion builds a product. Research builds a business.",
+    "text": "Opinions build a product. Research builds a business.",
     "tags": ["product", "strategy"]
   },
   {
@@ -8,7 +8,7 @@
     "tags": ["product", "strategy"]
   },
   {
-    "text": "The biggest competitive edge isn't building something good — it's knowing you're building the right thing.",
+    "text": "The biggest competitive edge isn't building something good. It's knowing you're building the right thing.",
     "tags": ["product", "strategy"]
   },
   {
@@ -24,7 +24,7 @@
     "tags": ["data", "people"]
   },
   {
-    "text": "AI agents don't replace the need for good questions. They make bad questions more expensive.",
+    "text": "AI agents don't replace the need for good questions. They make it more expensive to not ask.",
     "tags": ["ai", "strategy"]
   },
   {
@@ -34,9 +34,5 @@
   {
     "text": "Certainty is a product you build iteratively, the same way you build anything else worth having.",
     "tags": ["product", "strategy"]
-  },
-  {
-    "text": "The feedback loop is the product. Everything else is just output.",
-    "tags": ["product", "data"]
   }
 ]
