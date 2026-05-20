@@ -37,7 +37,7 @@ export default function Blog() {
               <p className="text-[#94a3b8] mt-4 text-sm">
                 Until then, check out my articles on{" "}
                 <a
-                  href="https://linkedin.com/in/benpoole"
+                  href="https://www.linkedin.com/in/benjaminpoole/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-[#06b6d4] hover:underline font-medium"

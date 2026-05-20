@@ -26,7 +26,7 @@ export default function Contact() {
 
         <div className="mt-8 pt-8 border-t border-[#3b4f6b]/10">
           <a
-            href="https://linkedin.com/in/benpoole"
+            href="https://www.linkedin.com/in/benjaminpoole/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-[#3b4f6b] text-sm font-medium hover:text-[#06b6d4] transition-colors"
